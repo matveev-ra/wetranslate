@@ -43,5 +43,16 @@
     font-weight: 800;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Acrom';
+    src: url('../fonts/Acrom-Bold.eot');
+    src: local('Acrom Bold'), local('Acrom-Bold'),
+        url('../fonts/Acrom-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Acrom-Bold.woff2') format('woff2'),
+        url('../fonts/Acrom-Bold.woff') format('woff'),
+        url('../fonts/Acrom-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 
