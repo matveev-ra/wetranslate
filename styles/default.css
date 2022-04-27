@@ -11,6 +11,15 @@ table{border-collapse:collapse}
 a:link,a:visited{color:#CB0FE0;text-decoration:underline}
 a:hover{color:#CB0FE0;text-decoration:none}
 
+:root {
+    --main-bg-color: brown;
+    --main-bg-color2: red;
+}
+
+
+
+
+
 
 *,
 *::before,
@@ -84,3 +93,4 @@ h3 {
     padding-bottom: 0;
     
 }
+

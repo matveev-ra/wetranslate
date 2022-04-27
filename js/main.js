@@ -41,6 +41,7 @@ $(function () {
         { // и не по его дочерним элементам
 			//div.hide(); // скрываем его
             $('.Flag__dropdown').slideUp(200);
+            $(".selectlink-js").removeClass('active');
 		}	
 	});
     
