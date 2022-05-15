@@ -4,9 +4,9 @@ $(function () {
     $(window).scroll(function () {
         var wScrTop = $(window).scrollTop()
         if (wScrTop > 0) {
-            $('.Top').addClass('Fixed-bar')
+            $('#Top').addClass('Fixed-bar')
         } else {
-            $('.Top').removeClass('Fixed-bar')
+            $('#Top').removeClass('Fixed-bar')
         }
 
     });
@@ -26,6 +26,7 @@ $(function () {
         });
         return false;
     });
+
     $('.Flag-js').on('click', function (e) {
         if ($('.Flag__dropdown').hasClass('active')) {
             $(".selectlink-js").html($(this).html());
@@ -34,6 +35,7 @@ $(function () {
             $(".selectlink-js").removeClass('active');
         }
     });
+
     $(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $(".selectlink-js"); // тут указываем ID элемента
 		if (!div.is(e.target) // если клик был не по нашему блоку
@@ -44,8 +46,6 @@ $(function () {
             $(".selectlink-js").removeClass('active');
 		}	
 	});
-    
-    
 
     $('.btn-trigger').click(function (e) {
         $('.Cantry__dropdown').slideToggle(200);
@@ -68,6 +68,7 @@ $(function () {
                 
             
     });
+    
     $(".Cantry__dropdown .Flag__select").on("click", function(){
         var tabs = $(".Cantry__dropdown .Flag__select")
             cont = $(".Contacts__wrap-tab .Cantry-tab");
@@ -110,6 +111,29 @@ $(function () {
         }
 
     });
+
+    $('.Slider1').owlCarousel({
+        // center: true,
+        items:3,
+        loop:true,
+        //margin:10,
+        nav:true,
+		lazyLoad:true,
+        dots: false,
+        responsive:{
+          0:{
+            items:1,
+            nav:false,
+            dots: true
+          },
+          768:{
+            nav:true,
+            dots: false,
+            items:2
+          }
+        }
+      });	
+
     //работа бургера меню
     $('#hamburger').click(function (e) {
         $('.dropDownMenu').fadeToggle();

@@ -39,7 +39,11 @@
   line-height: $lh;
 }
 
-
+@mixin hd2() {
+  @include font700(36px,43px);
+  color: var(--green-text-color);
+  text-align: center;
+}
 
 
 .flexA {
