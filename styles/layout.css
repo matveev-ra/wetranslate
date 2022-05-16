@@ -247,9 +247,9 @@ a.btn-mini:hover {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   background-color: var(--font-size);
 }
 
@@ -296,6 +296,11 @@ a.btn-mini:hover {
   z-index: 9;
 }
 
+.Top.Top-bar {
+  position: static;
+}
+
+.Top-bar,
 .Bottom-bar {
   background: -o-linear-gradient(356.3deg, #66A882 -10.98%, #488774 108.23%);
   background: linear-gradient(93.7deg, #66A882 -10.98%, #488774 108.23%);
