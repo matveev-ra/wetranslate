@@ -597,6 +597,10 @@ a.btn-mini:hover {
   margin: 0 20px;
 }
 
+.Top-info.Top-info3 {
+  display: block;
+}
+
 .LogOut a {
   font-weight: 700;
   font-size: 14px;
