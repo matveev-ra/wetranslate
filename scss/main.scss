@@ -122,6 +122,7 @@ a {
 
  &.Bottom-bar {
     position: static;
+    z-index: 9;
   }
 }
 
@@ -143,7 +144,7 @@ a {
   flex: 1 1 auto;
   position: relative;
 
-    @include max-s(1024px){
+    @include max-s(992px){
       display: flex;
       flex-wrap: wrap;
       justify-content: end; 
@@ -155,6 +156,11 @@ a {
     justify-content: center;
     margin-left: 0;
     align-items: center;
+
+      @include max-s(992px){
+        display: block;
+        padding: 0 20px;
+      }
 
     li {
       position: relative;
@@ -170,15 +176,32 @@ a {
         color: #fff;
         text-decoration: none;
         padding: 10px 0;
+
+          @include max-s(992px){
+            color: var(--green-text-color);
+          }
+          a:hover {
+        text-decoration: underline;
       }
-      a:hover { text-decoration: underline; }
-      span:hover { cursor: pointer; }
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      span:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
 
       &.parent {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+
+          @include max-s(992px){
+            display: block; 
+          }
 
         a, span {
           padding-right: 10px;
@@ -201,10 +224,10 @@ a {
             border-radius: 5px;
             z-index: 9;
 
-            @include max-s(850px)  {
-              box-shadow: none;
-              padding: 0;
-              background: none;
+            @include max-s(992px)  {
+              display: none;
+              padding: 0px 20px;
+              box-shadow:none;
             }
           }
         }
@@ -218,11 +241,12 @@ a {
         list-style: none;
         z-index: 9;
         width: 220px;
-        @include max-s(850px)  {
-          position: static;
-          display: block;
-          width: auto;
-        }
+
+          @include max-s(992px)  {
+            position: static;
+            width: auto;
+          }
+
         li {
           border: none;
           a {
@@ -232,11 +256,7 @@ a {
             text-decoration: none;
             text-align: left;
             padding: 0;
-            @include max-s(850px)  {
-              font-size: 15px;
-              text-align: center;
-              color: #2c80b8;
-            }
+   
             &:hover {
               text-decoration: underline;
               background: none;
@@ -250,8 +270,8 @@ a {
 
 .dropDownMenu {
 
-  @include max-s(1000px)  {
-    display: none;
+  @include max-s(992px)  {
+    //display: none;
     position: fixed;
     top: 0;
     left: -100%;
@@ -259,13 +279,21 @@ a {
     background: #fff;
     box-shadow: 0 3px 7px #cec7c7;
     z-index: 100;
-    -webkit-transition: all 0.25s linear;
-    -o-transition: all 0.25s linear;
-    transition: all 0.25s linear;
+    transition: all 0.5s linear;
+    width: 250px;
+    z-index: 10;
+    opacity: 0;
   }
+
+
   
   &.active {
     left:0px;
+    //display: block;
+    opacity: 1;
+    transition: all 0.5s linear;
+
+
     .Smenu__close {
       display: block;
     }
@@ -284,7 +312,7 @@ a {
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
 
-    @include max-s(1000px)  {
+    @include max-s(992px)  {
         display: block;
     }
 
@@ -329,6 +357,8 @@ a {
     top: -4px;
     -webkit-transform: translateY(-50%) rotate(-180deg);
     transform: translateY(-50%) rotate(-180deg);
+    margin-top: 18px;
+
     span {
       background-color: transparent;
       &:before {
@@ -525,6 +555,12 @@ a {
 
   .LogOut {
     margin-bottom: 30px;
+    
+    a {
+      color:#000;
+      display: block;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -536,6 +572,11 @@ header {
 
     @include max-s(992px){
       height: auto;
+    }
+
+    @include max-s(768px){
+      background: url('../images/bg-main1.jpg') -604px -76px no-repeat;
+  width: 100%;
     }
 }
 
@@ -1365,6 +1406,12 @@ header {
         margin: 0 10px 20px;
       }
     }
+}
+
+.Top-menu-foot {
+  @include max-s(992px){
+    display: none; 
+  }
 }
 
 

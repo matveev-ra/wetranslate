@@ -11,6 +11,35 @@ $(function () {
 
     });
 
+
+    $(window).resize(function(){
+        var width = $(window).innerWidth();
+        console.log(width);
+        if (width < 976) {
+            $('.dropDownMenu > ul').addClass('accordeon');
+        }else{
+            $('.dropDownMenu > ul').removeClass('accordeon');
+            $('.dropDownMenu').removeClass('active');
+            $('#hamburger').removeClass('active');
+
+
+        }
+     
+    }).resize();
+
+
+    //меню аккардион в левом сайдбаре
+    $(".accordeon > li > span").click(function (e) {
+        e.preventDefault();
+        var menu = $(this).closest('.accordeon');
+        if (false == $(this).next().is(':visible')) {
+            menu.find('li').removeClass('slide active');
+            menu.find('ul').slideUp();
+        }
+        $(this).next().slideToggle();
+        $(this).parent().addClass('slide');
+    });
+
     //select для языков
     $(".selectlink-js").on('click', function (e) {
         var $menu_popup = $(this).next();
@@ -135,19 +164,21 @@ $(function () {
       });	
 
     //работа бургера меню
-    $('#hamburger').click(function (e) {
-        $('.dropDownMenu').fadeToggle();
+    $('body #hamburger').click(function (e) {
+
         $(this).toggleClass('active');
         $('.dropDownMenu').toggleClass('active');
         
     });
     //закрыть боковое меню
-    $('#slide-close, .dropDownMenu ul li a').click(function (e) {
-        e.preventDefault();
-        $('.dropDownMenu').fadeToggle();
-        $('#hamburger').toggleClass('active');
-        $('.dropDownMenu').toggleClass('active');
-        
+
+    $('body #slide-close').on('click', function (e) {
+        if ($('.dropDownMenu').hasClass('active')) {
+            $('.dropDownMenu').removeClass('active');
+            $('#hamburger').removeClass('active');
+
+   
+        }
     });
 
     //подключение модалки
@@ -160,33 +191,33 @@ $(function () {
     });
 
 // form label
-(function ($) {
-    function topLabel(inputType) {
-        $(inputType).each(function () {
-            var $this = $(this);
-            // on focus add class active to label
-            $this.focus(function () {
-                $this.next().addClass("active");
-            });
-            //on blur check field and remove class if needed
-            $this.blur(function () {
-                if ($this.val() === '' || $this.val() === 'blank') {
-                    $this.next().removeClass();
-                }
-            });
-        });
-    }
-    // just add a class of "topLabel to the input field!"
-    topLabel(".topLabel");
-})(jQuery);
+// (function ($) {
+//     function topLabel(inputType) {
+//         $(inputType).each(function () {
+//             var $this = $(this);
+//             // on focus add class active to label
+//             $this.focus(function () {
+//                 $this.next().addClass("active");
+//             });
+//             //on blur check field and remove class if needed
+//             $this.blur(function () {
+//                 if ($this.val() === '' || $this.val() === 'blank') {
+//                     $this.next().removeClass();
+//                 }
+//             });
+//         });
+//     }
+//     // just add a class of "topLabel to the input field!"
+//     topLabel(".topLabel");
+// })(jQuery);
 
-$("a[href^='#']").click(function(e){
-    e.preventDefault();
-    var id  = $(this).attr('href'), //забираем идентификатор бока с атрибута href
-        top = $(id).offset().top; //узнаем высоту от начала страницы до блока на который ссылается якорь
+// $("a[href^='#']").click(function(e){
+//     e.preventDefault();
+//     var id  = $(this).attr('href'), //забираем идентификатор бока с атрибута href
+//         top = $(id).offset().top; //узнаем высоту от начала страницы до блока на который ссылается якорь
     
-    $("html, body").animate({scrollTop: (top - 90)});
-});
+//     $("html, body").animate({scrollTop: (top - 90)});
+// });
 
 
 

@@ -293,6 +293,7 @@ a.btn-mini:hover {
 
 .Top.Bottom-bar {
   position: static;
+  z-index: 9;
 }
 
 .Bottom-bar {
@@ -350,12 +351,18 @@ a.btn-mini:hover {
   padding: 10px 0;
 }
 
+.Top-menu ul li a a:hover,
+.Top-menu ul li span a:hover {
+  text-decoration: underline;
+}
+
 .Top-menu ul li a:hover {
   text-decoration: underline;
 }
 
 .Top-menu ul li span:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .Top-menu ul li.parent {
@@ -427,6 +434,10 @@ a.btn-mini:hover {
 
 .dropDownMenu.active {
   left: 0px;
+  opacity: 1;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 .dropDownMenu.active .Smenu__close {
@@ -493,6 +504,7 @@ a.btn-mini:hover {
   -webkit-transform: translateY(-50%) rotate(-180deg);
   -ms-transform: translateY(-50%) rotate(-180deg);
   transform: translateY(-50%) rotate(-180deg);
+  margin-top: 18px;
 }
 
 #hamburger.active span {
@@ -702,6 +714,12 @@ a.btn-mini:hover {
 
 .Top-info2 .LogOut {
   margin-bottom: 30px;
+}
+
+.Top-info2 .LogOut a {
+  color: #000;
+  display: block;
+  margin: 0 auto;
 }
 
 header {
@@ -1397,17 +1415,6 @@ a.more::after {
 }
 
 @media only screen and (max-width: 1024px) {
-  .Top-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: end;
-  }
-
   .About {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -1449,9 +1456,45 @@ a.more::after {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .dropDownMenu {
+@media only screen and (max-width: 992px) {
+  .Top-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+  }
+
+  .Top-menu ul {
+    display: block;
+    padding: 0 20px;
+  }
+
+  .Top-menu ul li a,
+  .Top-menu ul li span {
+    color: var(--green-text-color);
+  }
+
+  .Top-menu ul li.parent {
+    display: block;
+  }
+
+  .Top-menu ul li.parent:hover ul {
     display: none;
+    padding: 0px 20px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .Top-menu ul li ul {
+    position: static;
+    width: auto;
+  }
+
+  .dropDownMenu {
     position: fixed;
     top: 0;
     left: -100%;
@@ -1460,17 +1503,18 @@ a.more::after {
     -webkit-box-shadow: 0 3px 7px #cec7c7;
     box-shadow: 0 3px 7px #cec7c7;
     z-index: 100;
-    -webkit-transition: all 0.25s linear;
-    -o-transition: all 0.25s linear;
-    transition: all 0.25s linear;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    width: 250px;
+    z-index: 10;
+    opacity: 0;
   }
 
   #hamburger {
     display: block;
   }
-}
 
-@media only screen and (max-width: 992px) {
   header {
     height: auto;
   }
@@ -1556,26 +1600,9 @@ a.more::after {
     order: 1;
     margin: 0 10px 20px;
   }
-}
 
-@media only screen and (max-width: 850px) {
-  .Top-menu ul li.parent:hover ul {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    padding: 0;
-    background: none;
-  }
-
-  .Top-menu ul li ul {
-    position: static;
-    display: block;
-    width: auto;
-  }
-
-  .Top-menu ul li ul li a {
-    font-size: 15px;
-    text-align: center;
-    color: #2c80b8;
+  .Top-menu-foot {
+    display: none;
   }
 }
 
@@ -1589,6 +1616,11 @@ a.more::after {
   .HD2 {
     font-size: 25px;
     line-height: 30px;
+  }
+
+  header {
+    background: url("../images/bg-main1.jpg") -604px -76px no-repeat;
+    width: 100%;
   }
 
   .header__wrap {
