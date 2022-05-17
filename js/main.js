@@ -29,7 +29,7 @@ $(function () {
 
 
     //меню аккардион в левом сайдбаре
-    $(".accordeon > li > span").click(function (e) {
+    $("body .accordeon > li > span").on('click', function (e) {
         e.preventDefault();
         var menu = $(this).closest('.accordeon');
         if (false == $(this).next().is(':visible')) {

@@ -2,7 +2,7 @@
 @import "../styles/default.css"screen;
 
 :root {
---green-text-color: #0F4D52;
+    --green-text-color: #0F4D52;
 }
 
 @import "media-queries";
@@ -18,6 +18,7 @@
     @include font800(40px, 50px);
   }
 }
+
 .HD2 {
   @include font700(36px,43px);
   color: var(--green-text-color);
@@ -40,33 +41,28 @@ color: var(--green-text-color);
 }
 
 .bg-title {
-padding: 25px 0;
-position: relative;
-
-span {
-  display: inline-block;
   padding: 25px 0;
   position: relative;
 
-  &::after{
-    content:' ';
-    display:block;
-    background: url('../images/bg-title.png') center center no-repeat;
-    width: 91px;
-    height: 89px; 
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    margin-left: -35px;
+  span {
+    display: inline-block;
+    padding: 25px 0;
+    position: relative;
+
+    &::after {
+      content: ' ';
+      display: block;
+      background: url('../images/bg-title.png') center center no-repeat;
+      width: 91px;
+      height: 89px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      margin-left: -35px;
+    }
   }
 }
-
-
-}
-
-
-
 
 .Wrapper-main {
   display: flex;
@@ -78,12 +74,11 @@ span {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  flex: 1 0 auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  background-color: var(--font-size);
+  // flex: 1 0 auto;
+  // height: 100%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: start;
 }
 .ContainerWrap {
   max-width: 1170px;
@@ -590,11 +585,11 @@ header {
 .header {
   
     &__wrap {
-      margin-top: 102px;
+      padding-top: 102px;
       flex-wrap: nowrap;
 
       @include max-s(768px){
-        margin-top: 0px;
+        padding-top: 0px;
       }
       
     }
@@ -1308,7 +1303,6 @@ header {
 }
 
 
-
 .Foot {
 
 		&__wrap {
@@ -1319,20 +1313,17 @@ header {
       padding: 50px 15px;
 
       @include max-s(992px){
-        justify-content: center;
-      }
+        justify-content: center;}
 		}
 
 		&__socnet {
 
-        @include max-s(992px) {
-          order: 1;
-          margin: 0 10px 20px;
-        }
+      @include max-s(992px) {
+        order: 1;
+        margin: 0 10px 20px;}
 
       img {
-        margin:  0 2px;
-      }
+        margin:  0 2px;}
     }
 
 		&__support {
@@ -1347,20 +1338,18 @@ header {
       padding: 15px;
 
         @include max-s(992px)  {
-          order:2;
-        }
+          order:2;}
+
         @include max-s(600px){
-          flex-wrap: wrap;
-        }
+          flex-wrap: wrap;}
 
       .Phone {
         width: 50%;
 
-          @include max-s(600px){
-            width: 100%;
-            text-align: center;
-            margin-bottom: 20px;
-          }
+        @include max-s(600px){
+          width: 100%;
+          text-align: center;
+          margin-bottom: 20px;}
 
         a {
           @include font500(24px, 28px);
@@ -1368,8 +1357,7 @@ header {
           text-decoration: none;
 
           &:hover {
-            text-decoration: underline;
-          }
+            text-decoration: underline;}
         }
       }
       .Suports {
@@ -1413,6 +1401,84 @@ header {
     display: none; 
   }
 }
+
+.Breadcrambs {
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 20px;
+
+  a {
+    @include font400(14px,18px);
+    color: #000;
+    padding-right: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    position: relative;
+
+      &:hover {
+          text-decoration: underline;}
+
+      &::after {
+        content:'→';
+        display:block;
+        position: absolute;
+        top: 0;
+        right: 0;}
+  }
+
+  span {
+    color: #C7C7C7;
+  }
+   
+}
+
+.MTranslate {
+  
+
+  &__wrap {
+    padding: 70px 115px;
+  }
+
+  &__fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+  }
+
+  &__fields-item {
+    width: 346px;
+  }
+
+  &__fields-hd {
+    @include font700(22px,26px);
+    color: var(--green-text-color);
+  }
+
+  &__fields-row {
+    background: url('../images/arrow.svg') center top no-repeat;
+    width: 30px;
+    height: 30px; 
+    margin: 0 20px;
+  }
+}
+
+.Field-select {
+
+  select {
+    background: #FFFFFF;
+    border: 1px solid #0F4D52;
+    border-radius: 5px;
+    @include font700(16px,19px);
+    color: #131313;
+    padding-left: 20px;
+  }
+}
+.TypeTranslate {
+}
+
 
 
 

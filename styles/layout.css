@@ -236,21 +236,6 @@ a.btn-mini:hover {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: start;
-  background-color: var(--font-size);
 }
 
 .ContainerWrap {
@@ -739,7 +724,7 @@ header {
 }
 
 .header__wrap {
-  margin-top: 102px;
+  padding-top: 102px;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
@@ -1415,6 +1400,93 @@ a.more::after {
   color: #000;
 }
 
+.Breadcrambs {
+  padding-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.Breadcrambs a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  padding-right: 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  position: relative;
+}
+
+.Breadcrambs a:hover {
+  text-decoration: underline;
+}
+
+.Breadcrambs a::after {
+  content: '→';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.Breadcrambs span {
+  color: #C7C7C7;
+}
+
+.MTranslate__wrap {
+  padding: 70px 115px;
+}
+
+.MTranslate__fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.MTranslate__fields-item {
+  width: 346px;
+}
+
+.MTranslate__fields-hd {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: var(--green-text-color);
+}
+
+.MTranslate__fields-row {
+  background: url("../images/arrow.svg") center top no-repeat;
+  width: 30px;
+  height: 30px;
+  margin: 0 20px;
+}
+
+.Field-select select {
+  background: #FFFFFF;
+  border: 1px solid #0F4D52;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #131313;
+  padding-left: 20px;
+}
+
 /*# sourceMappingURL=layout.css.map */
 
 @media only screen and (max-width: 1140px) {
@@ -1633,7 +1705,7 @@ a.more::after {
   }
 
   .header__wrap {
-    margin-top: 0px;
+    padding-top: 0px;
   }
 
   .header__img {
