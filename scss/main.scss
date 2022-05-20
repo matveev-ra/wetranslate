@@ -1495,7 +1495,8 @@ header {
     padding:0  20px;
 
     option {
-      height: 50px;
+      @include font700(16px,19px);
+      color: #131313;
     }
 
   }
@@ -1504,10 +1505,11 @@ header {
 
 
 
-.TypeT {
+.TypeTranslate {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 55px;
 
   &__item {
     display: flex;
@@ -1520,26 +1522,24 @@ header {
     border: 1px solid #D3D3D3;
     border-radius: 5px;
 
-    &.active {
+    &.active, &:hover  {
       background: linear-gradient(93.7deg, #FC9102 -10.98%, #FFA32E 108.23%);
       box-shadow: 9px 8px 17px rgba(252, 144, 0, 0.45);
       border: 1px solid #FC9102;
+      cursor: pointer;
 
-      .TypeT__tarif {
+      .TypeTranslate__tarif {
         background: #FE8900;
       }
-      .TypeT__text-title {
+      .TypeTranslate__text-title {
         color: #fff;
       }
-      .TypeT__text-category {
+      .TypeTranslate__text-category {
         color: #9C5900;
       }
 
     }
 
-    &:hover {
-      cursor: pointer;
-    }
   }
 
   &__tarif {
@@ -1591,7 +1591,28 @@ header {
 }
 
 
+.VidTranslate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 15px;
+  
+  .btn-default:not(:last-child) {
+    margin-right: 20px;
+  }
+}
 
+.InfoTextarea {
+  border: 1px solid #0F4D52;
+  border-radius: 5px;
+  height: 470px;
+
+  textarea {
+    width: 100%;
+    height: 100%;
+  }
+
+}
 
 
 
