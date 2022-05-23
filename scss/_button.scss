@@ -14,7 +14,6 @@
   @include font400(14px,16px);
   color: #fff;
   text-decoration: none; 
-  
 
   &:hover {
     background: linear-gradient(93.7deg, #dd7e03 -10.98%, #d88b27 108.23%);
@@ -23,6 +22,7 @@
     box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
   }
 }
+
 .btn-default, a.btn-default{
   width: auto;
   height: 40px;
