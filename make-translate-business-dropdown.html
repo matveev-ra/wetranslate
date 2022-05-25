@@ -11,9 +11,6 @@
 	<link rel="stylesheet" href="styles/layout.css" type="text/css"/>
 	<link rel="stylesheet" href="styles/owl.carousel.css" type="text/css"/>
 	<link rel="stylesheet" href="styles/owl.theme.default.css" type="text/css"/>
-	
-
-
 </head>
 <body>
   <div class="Wrapper-main">
@@ -150,8 +147,7 @@
             <!--/MTranslate__fields -->
 
             <div class="TypeTranslate">
-              <div class="ShadowWrap"></div>
-              <div class="TypeTranslate__item active">
+              <div class="TypeTranslate__item">
                 <div class="TypeTranslate__tarif">
                   <div class="TypeTranslate__tarif-price">$0.14</div>
                   <div class="TypeTranslate__tarif-row"></div>
@@ -162,7 +158,7 @@
                   <div class="TypeTranslate__text-category">Сайты | Отчеты</div>
                 </div>
               </div>
-              <div class="TypeTranslate__item">
+              <div class="TypeTranslate__item active">
                 <div class="TypeTranslate__tarif">
                   <div class="TypeTranslate__tarif-price">$0.14</div>
                   <div class="TypeTranslate__tarif-row"></div>
@@ -187,22 +183,27 @@
             </div>
             <!--/TypeTranslate -->
 
-            <div class="MTranslate__wrap2">
-              <div class="ShadowWrap"></div>
-
+            <div class="wrap2">
               <div class="VidTranslate">
-                <button class="btn-default active">Перевести текст</button>
-                <button class="btn-default">Перевести файлы</button>
+                <button class="btn-default">Перевести текст</button>
+                <button class="btn-default active">Перевести файлы</button>
                 <button class="btn-default">Перевести аудио</button>
               </div>
               <!-- /VidTranslate -->
 
-              <div class="InfoTextarea">
-                <textarea name="" id="" >Введите текст для перевода</textarea>
+              <div class="InfoTextarea text">
+                <div class="dropdown">
+                  <div class="dropdown__wrap">
+                    <div class="dropdown__info">
+                      <div class="dropdown__icon"><img src="images/Icon-dropdown.svg" alt=""></div>
+                      <div class="dropdown__desc">Перетащите файл сюда</div>
+                      <div class="dropdown__tipfiles">txt, odt, pdf, docx.</div>
+                    </div>
+                  </div>
+                  <button class="btn-green">Выбрать файл</button>
+                </div>
               </div>
-              <!-- /InfoTranslate -->
-              
-            
+              <!-- /InfoTextarea -->
 
               <div class="InfoTrans">
                 <div class="InfoTrans__left">
@@ -218,8 +219,11 @@
                   </div>
                 </div>
               </div>
+              <!-- /InfoTrans -->
+              
             </div>
-            <!--/MTranslate__wrap2 -->
+            
+
 
 
           </div>

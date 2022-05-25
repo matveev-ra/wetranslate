@@ -1462,10 +1462,12 @@ header {
       padding: 25px;
     }
     @include max-s(768px){
-      padding: 10px;
+      padding: 20px;
     }
   }
-
+  &__wrap2 {
+    position: relative;
+  }
   &__fields {
     display: flex;
     flex-wrap: wrap;
@@ -1535,6 +1537,7 @@ header {
 
   }
 
+
 }
 
 
@@ -1544,6 +1547,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 55px;
+  position: relative;
 
     @include max-s(768px){
       margin-bottom: 30px;
@@ -1641,6 +1645,8 @@ header {
   flex-wrap: wrap;
   justify-content: start;
   margin-bottom: 15px;
+  position: relative;
+
   .btn-default {
     @include max-s(768px){
       width: 100%; 
@@ -1658,6 +1664,7 @@ header {
 
 .InfoTextarea {
   margin-bottom: 20px;
+  position: relative;
   
   textarea {
     width: 100%;
@@ -1673,6 +1680,9 @@ header {
         min-height: 150px;
       }
   }
+
+
+
 }
 
 
@@ -1705,7 +1715,7 @@ header {
     align-items: center;
     margin-bottom: 20px;
 
-      @include max-s(450px){
+      @include max-s(460px){
         width: 100%; 
         justify-content: center;
       }
@@ -1716,7 +1726,7 @@ header {
     color: #707070;
     margin-right: 40px;
     
-      @include max-s(450px){
+      @include max-s(460px){
         width: 100%; 
         margin-bottom: 30px;
         margin-right: 0;
@@ -1727,11 +1737,156 @@ header {
     .btn-orange {
       width: auto;
 
-        @include max-s(450px){
+        @include max-s(460px){
           width: 100%; 
         }
     }
   }
 }
+
+.ShadowWrap {
+  position: absolute;
+  background: #DADADA;
+  opacity: 0.5;
+  border-radius: 5px;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+  z-index: 1;
+
+    @include max-s(768px){
+      top: -10px;
+      right: -10px;
+      bottom: -10px;
+      left: -10px;
+    }
+
+}
+
+
+
+.dropdown {
+    width: 100%;
+    border: 1px solid #0F4D52;
+    border-radius: 5px;
+    padding: 24px 24px 50px;
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+    @include max-s(992px){ 
+      height: 300px;
+    }
+
+
+  &__info {
+    text-align: center;
+  }
+
+  &__icon {}
+
+  &__desc {
+    @include font700(22px,27px);
+    color: var(--green-text-color);
+    margin-bottom: 10px;
+  }
+
+  &__tipfiles {
+    @include font400(18px,18px);
+    color: #707070;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  .btn-green {
+    margin: 0 auto;
+  }
+}
+
+.dropfiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 20px;  
+
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 100%;
+  }
+
+  &__item {
+    width: 165px;
+    border: 1px solid #EFEFEF; 
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    margin: 0 5px 20px;
+    padding: 0 10px 20px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: url('../images/icon-close.svg') center top no-repeat;
+    width: 20px;
+    height: 20px; 
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin-top: 40px;
+    margin-bottom: 10px; 
+
+    &.pdf {background: url('../images/icon-file-pdf.svg') center top no-repeat;}
+    &.txt {background: url('../images/icon-file-txt.svg') center top no-repeat; }
+    &.doc {background: url('../images/icon-file-doc.svg') center top no-repeat; }
+    &.odt {background: url('../images/icon-file-odt.svg') center top no-repeat; }
+  }
+
+  &__name {
+    @include font400(12px,18px);
+    color: #000;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  &__filesize {
+    @include font400(12px,18px);
+    color: #707070;
+  }
+}
+
+.pdf {
+}
+.txt {
+}
+.doc {
+}
+.odt {
+}
+.btn-green {
+}
+
+
+
 
 

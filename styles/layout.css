@@ -1501,6 +1501,10 @@ a.more::after {
   padding: 70px 115px;
 }
 
+.MTranslate__wrap2 {
+  position: relative;
+}
+
 .MTranslate__fields {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1565,6 +1569,7 @@ a.more::after {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 55px;
+  position: relative;
 }
 
 .TypeTranslate__item {
@@ -1693,6 +1698,7 @@ a.more::after {
   -ms-flex-pack: start;
   justify-content: start;
   margin-bottom: 15px;
+  position: relative;
 }
 
 .VidTranslate .btn-default:not(:last-child) {
@@ -1701,6 +1707,7 @@ a.more::after {
 
 .InfoTextarea {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .InfoTextarea textarea {
@@ -1768,6 +1775,164 @@ a.more::after {
 
 .InfoTrans__btn .btn-orange {
   width: auto;
+}
+
+.ShadowWrap {
+  position: absolute;
+  background: #DADADA;
+  opacity: 0.5;
+  border-radius: 5px;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+  z-index: 1;
+}
+
+.dropdown {
+  width: 100%;
+  border: 1px solid #0F4D52;
+  border-radius: 5px;
+  padding: 24px 24px 50px;
+}
+
+.dropdown__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.dropdown__info {
+  text-align: center;
+}
+
+.dropdown__desc {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: var(--green-text-color);
+  margin-bottom: 10px;
+}
+
+.dropdown__tipfiles {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #707070;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.dropdown .btn-green {
+  margin: 0 auto;
+}
+
+.dropfiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.dropfiles__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 100%;
+}
+
+.dropfiles__item {
+  width: 165px;
+  border: 1px solid #EFEFEF;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  margin: 0 5px 20px;
+  padding: 0 10px 20px;
+}
+
+.dropfiles__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: url("../images/icon-close.svg") center top no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.dropfiles__close:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.dropfiles__icon {
+  width: 80px;
+  height: 80px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.dropfiles__icon.pdf {
+  background: url("../images/icon-file-pdf.svg") center top no-repeat;
+}
+
+.dropfiles__icon.txt {
+  background: url("../images/icon-file-txt.svg") center top no-repeat;
+}
+
+.dropfiles__icon.doc {
+  background: url("../images/icon-file-doc.svg") center top no-repeat;
+}
+
+.dropfiles__icon.odt {
+  background: url("../images/icon-file-odt.svg") center top no-repeat;
+}
+
+.dropfiles__name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.dropfiles__filesize {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #707070;
 }
 
 /*# sourceMappingURL=layout.css.map */
@@ -1980,6 +2145,10 @@ a.more::after {
   .InfoTextarea textarea {
     min-height: 300px;
   }
+
+  .dropdown {
+    height: 300px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -2122,7 +2291,7 @@ a.more::after {
   }
 
   .MTranslate__wrap {
-    padding: 10px;
+    padding: 20px;
   }
 
   .MTranslate__fields {
@@ -2171,6 +2340,13 @@ a.more::after {
 
   .InfoTextarea textarea {
     min-height: 150px;
+  }
+
+  .ShadowWrap {
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
   }
 }
 
@@ -2238,7 +2414,7 @@ a.more::after {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 460px) {
   .InfoTrans__right {
     width: 100%;
     -webkit-box-pack: center;
