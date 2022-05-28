@@ -165,10 +165,8 @@ $(function () {
 
     //работа бургера меню
     $('body #hamburger').click(function (e) {
-
         $(this).toggleClass('active');
         $('.dropDownMenu').toggleClass('active');
-        
     });
     //закрыть боковое меню
 
@@ -176,8 +174,7 @@ $(function () {
         if ($('.dropDownMenu').hasClass('active')) {
             $('.dropDownMenu').removeClass('active');
             $('#hamburger').removeClass('active');
-
-   
+  
         }
     });
 
@@ -189,6 +186,24 @@ $(function () {
                 closeClass:'close'
             });
     });
+
+    // $('.IconProfile').on('click', function (e) {
+    $('.IconProfile').on('click', function (e) {
+        $(this).toggleClass('active');
+        $('.ProfPanel').slideToggle();
+        
+    });
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".IconProfile"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0  ) 
+        { // и не по его дочерним элементам
+			//div.hide(); // скрываем его
+            $('.ProfPanel').slideUp(200);
+		}	
+	});
+
+
 
 // form label
 // (function ($) {

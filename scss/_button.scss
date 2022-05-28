@@ -76,8 +76,31 @@
     box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
   }
 }
+.btn-gray, a.btn-gray{
+  width: 200px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 18px;
+  background: linear-gradient(93.7deg, #B3B3B3 -10.98%, #8f8e8e 108.23%);
+  //background: #B3B3B3;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  transition: all 0.5s linear;
+  @include font400(14px,16px);
+  color: #fff;
+  text-decoration: none; 
+  
 
-
+  &:hover {
+    background: linear-gradient(93.7deg, #dd7e03 -10.98%, #d88b27 108.23%);
+    cursor: pointer;
+    transition: all 0.5s linear;
+    box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
+  }
+}
 
 .btn-mini, a.btn-mini {
   width: 142px;
