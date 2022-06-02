@@ -126,3 +126,17 @@
   }
 }
 
+
+.btn-label {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  height: 34px;
+  width: auto;
+  padding: 2px 18px;
+  @include font400(13px,34px);
+  color: #000;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
