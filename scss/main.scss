@@ -1242,7 +1242,7 @@ header {
     }
 }
 
-.News {
+.LastNews {
   padding-bottom: 50px;
   
   &_hd {
@@ -2688,6 +2688,102 @@ header {
     }
   }
 }
+
+.News {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -15px 100px;
+
+  @include max-s(991px){
+      width: 100%;
+      margin: 0 0px 100px;
+    }
+ 
+}
+
+.NewsItem {
+  width: 47%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 15px 20px;
+
+    @include max-s(1024px){
+      width: 45%;
+    }
+
+    @include max-s(991px){
+      width: 100%;
+      margin: 0 0px 20px;
+    }
+    @include max-s(400px){
+      margin: 0 0px 30px;
+    }
+
+  &__img {
+    flex: 0 0 167px;
+    margin-right: 20px;
+
+    @include max-s(992px)  {
+      flex: 0 0 120px;
+    }
+
+    @include max-s(576px)  {
+      flex: 0 0 100px;
+    }
+    @include max-s(400px)  {
+      flex: 0 0 100%;
+      text-align: center;
+      margin: 0px auto 10px;
+    }
+
+    img {
+      @include max-s(400px)  {
+        width: 100px;
+      }
+    }
+  }
+
+  &__info {
+    flex: 1 1;
+
+    @include max-s(400px)  {
+      flex: 1 1 100%;
+
+    }
+  }
+
+  &__title {
+    @include font700(16px,22px);
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  &__anons {
+    @include font400(14px,20px);
+    color: #000;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+  }
+
+  &__date {
+    @include font400(12px,18px);
+    color: rgba(0, 0, 0, 0.50);
+  }
+}
+.More-news {
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 
 
 
