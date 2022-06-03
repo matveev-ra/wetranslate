@@ -2918,7 +2918,7 @@ a.OrderAudio__download:hover {
 }
 
 .indent {
-  padding: 15px;
+  padding: 20px 15px;
   -webkit-box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -2947,6 +2947,85 @@ a.OrderAudio__download:hover {
 
 .indent p:last-child {
   padding-bottom: 0;
+}
+
+.Сontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.СontentPage {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  padding: 50px;
+  background: -o-radial-gradient(61.22% 52.91%, 26.25% 99.93%, #FFFFFF 0%, #FFFFFF 100%);
+  background: radial-gradient(26.25% 99.93% at 61.22% 52.91%, #FFFFFF 0%, #FFFFFF 100%);
+  -webkit-box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.СontentPage ul {
+  list-style: disc;
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+
+.СontentPage ul li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #000;
+}
+
+.ContentSidebar {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 275px;
+  flex: 0 0 275px;
+  margin-right: 20px;
+}
+
+.ContentMenu ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.ContentMenu ul li {
+  padding-bottom: 5px;
+}
+
+.ContentMenu ul li a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--green-text-color);
+  position: relative;
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+.ContentMenu ul li a:after {
+  content: '→';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.ContentMenu ul li a.active,
+.ContentMenu ul li a:hover {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--green-text-color);
 }
 
 /*# sourceMappingURL=layout.css.map */
@@ -3213,6 +3292,20 @@ a.OrderAudio__download:hover {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 300px;
     flex: 0 1 300px;
+  }
+
+  .Сontent {
+    margin-bottom: 50px;
+  }
+
+  .СontentPage {
+    padding: 20px;
+  }
+
+  .ContentSidebar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 240px;
+    flex: 0 0 240px;
   }
 }
 
@@ -3527,6 +3620,13 @@ a.OrderAudio__download:hover {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 100%;
     flex: 0 1 100%;
+  }
+
+  .ContentSidebar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
   }
 }
 

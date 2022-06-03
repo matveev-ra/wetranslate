@@ -2866,7 +2866,7 @@ header {
 }
 
 .indent {
-  padding: 15px;
+  padding: 20px 15px;
   box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin-bottom: 20px;
@@ -2893,6 +2893,104 @@ header {
     }
   }
 }
+
+.Сontent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+
+  @include max-s(992px){
+    margin-bottom: 50px;
+  }
+}
+
+.СontentPage {
+  flex: 1 1;
+  padding: 50px;
+  background: radial-gradient(26.25% 99.93% at 61.22% 52.91%, #FFFFFF 0%, #FFFFFF 100%);
+  box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  @include max-s(992px){
+    padding: 20px;
+  }
+
+  ul {
+    list-style: disc;
+    margin-bottom: 20px;
+    margin-left: 25px;
+
+    li {
+      @include font400(16px,27px);
+      color: #000;
+    }
+  }
+
+}
+
+.ContentSidebar {
+  flex: 0 0 275px;
+  margin-right: 20px;
+
+  @include max-s(992px){
+    flex: 0 0 240px;
+  }
+  @include max-s(768px){
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.ContentMenu {
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+    li {
+      padding-bottom: 5px;
+      a {
+        @include font400(16px,18px);
+        color: var(--green-text-color);
+        position: relative;
+        padding-right: 20px;
+        text-decoration: none;
+
+        &:after {
+          content: '→';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        &.active, &:hover {
+          @include font700(16px,18px);
+          color: var(--green-text-color);
+        }
+
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
