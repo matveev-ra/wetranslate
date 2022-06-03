@@ -1279,7 +1279,11 @@ header {
 
   &__img {
     flex: 0 0 82px;
-    margin-right: 20px;      
+    margin-right: 20px;  
+
+    @include max-s(768px){
+      margin-right: 10px; 
+    }    
   }
 
   &__info {
@@ -1290,6 +1294,11 @@ header {
     @include font400(16px,22px);
     color: #000;
     margin-bottom: 20px;
+
+      @include max-s(768px){
+        @include font400(14px,16px);
+        margin-bottom: 10px;
+      }
   }
 
   &__bottom {
@@ -1310,6 +1319,10 @@ header {
   padding-right: 20px;
   position: relative;
   text-decoration: none;
+
+    @include max-s(768px){
+      @include font700(14px,16px);
+    }
 
   &:hover {
     text-decoration: underline;
@@ -1431,6 +1444,10 @@ header {
   flex-wrap: wrap;
   justify-content: start;
   margin-bottom: 20px;
+
+    @include max-s(768px){
+      padding-top: 20px;
+    }
 
   a {
     @include font400(14px,18px);
@@ -1566,8 +1583,6 @@ header {
   }
 }
 
-
-
 .TypeTranslate {
   display: flex;
   flex-wrap: wrap;
@@ -1665,7 +1680,6 @@ header {
   }
 }
 
-
 .VidTranslate {
   display: flex;
   flex-wrap: wrap;
@@ -1710,7 +1724,6 @@ header {
 
 
 }
-
 
 .InfoTrans {
   display: flex;
@@ -2785,6 +2798,101 @@ header {
 }
 
 
+.NewsArticle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.NewsPost {
+  flex: 1 1;
+  margin-right: 20px;
+  margin-bottom: 100px;
+
+    @include max-s(768px){
+      flex: 0 1 100%;
+      margin-bottom: 30px;
+    }
+
+  .HD-page {
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    margin-bottom: 40px;
+
+    @include max-s(768px){
+      margin-bottom: 20px; 
+    }
+  }
+
+  ul {
+    list-style: disc;
+    margin-bottom: 20px;
+    margin-left: 25px;
+
+    li {
+      @include font400(16px,27px);
+      color: #000;
+    }
+  }
+
+
+}
+
+.NewsSidebar {
+  flex: 0 1 360px;
+
+    @include max-s(992px){
+      flex: 0 1 300px;
+    }
+    @include max-s(768px){
+      flex: 0 1 100%;
+    }
+
+  .LastNews_hd {
+    margin-bottom: 30px;
+    line-height: 43px;
+  }
+
+  &__wrap {
+    
+  }
+  .LastNews__item {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.indent {
+  padding: 15px;
+  box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: relative;
+
+  &__left {
+    position: absolute;
+    width: 11px;
+    background: linear-gradient(93.7deg, #66A882 -10.98%, #488774 108.23%);
+    border-radius: 5px;
+    top: 10px;
+    bottom: 15px;
+    left: 10px;
+  }
+
+
+  p {
+    @include font700(14px,19px);
+    color: var(--green-text-color);
+    padding-left: 25px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
 
 
 
