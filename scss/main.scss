@@ -2975,6 +2975,153 @@ header {
 }
 
 
+.Faq {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+
+  @include max-s(768px){
+    margin-bottom: 40px; 
+  }
+}
+
+.FaqSidebar {
+  flex: 0 0 275px;
+  margin-right: 20px;
+
+  @include max-s(992px){
+    flex: 0 0 240px;
+  }
+  @include max-s(768px){
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.FaqMenu {
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+    li {
+      padding-bottom: 5px;
+      a {
+        @include font400(16px,18px);
+        color: var(--green-text-color);
+        position: relative;
+        padding-right: 20px;
+        text-decoration: none;
+
+        &:after {
+          content: '→';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        &.active, &:hover {
+          @include font700(16px,18px);
+          color: var(--green-text-color);
+        }
+
+      }
+    }
+  }
+}
+
+.FaqCont {
+  flex: 1 1;
+
+  .HD2 {
+    text-align: left;
+    padding-left: 40px;
+    @include font700(24px,28px);
+    color: var(--green-text-color);
+  }
+  .bg-title {
+    padding: 0 0 25px 40px;
+  }
+  .bg-title span {
+    padding: 21px 0;
+  }
+  .bg-title span::after {
+    background-size:cover;
+    height: 70px;
+    width: 70px;
+    margin-left: -28px;
+  }
+
+		&__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 20px;
+    }
+
+		&__item {
+      width: 48%;
+      border: 1px solid #D3D3D3;
+      border-radius: 5px;
+      padding: 40px;
+      position: relative;
+      margin-bottom: 20px;
+
+      @include max-s(992px){
+        padding: 15px;
+      } 
+
+      @include max-s(768px)  {
+        width: 100%;
+        
+      }
+    }
+
+		&__title {
+      @include font700(18px,21px);
+      color: var(--green-text-color);
+      padding-right: 40px;
+      padding-bottom: 20px;
+
+      @include max-s(992px){
+        padding-right: 25px;
+      }
+    }
+
+		&__text {
+      display: none;
+      @include font400(14px,18px);
+      color: var(--green-text-color);
+    }
+}
+
+.FaqTrigger {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 20px;
+  height: 20px;
+  background: url('../images/arrow-down-up.svg') center top no-repeat;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include max-s(992px){
+      top: 20px;
+      right: 20px;
+    } 
+
+  // &.down {
+  //   transform: rotate(0deg);
+  // }
+  &.up {
+    transform: rotate(180deg);
+  }
+
+}
 
 
 

@@ -204,6 +204,13 @@ $(function () {
 	});
 
 
+    
+        $('.FaqTrigger').on('click', function (e) {
+            $(this).toggleClass('up');
+            $(this).parent().find('.FaqCont__text').slideToggle();
+
+        });
+    
 
 // form label
 // (function ($) {

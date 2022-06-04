@@ -3028,6 +3028,150 @@ a.OrderAudio__download:hover {
   color: var(--green-text-color);
 }
 
+.Faq {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.FaqSidebar {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 275px;
+  flex: 0 0 275px;
+  margin-right: 20px;
+}
+
+.FaqMenu ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.FaqMenu ul li {
+  padding-bottom: 5px;
+}
+
+.FaqMenu ul li a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--green-text-color);
+  position: relative;
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+.FaqMenu ul li a:after {
+  content: '→';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.FaqMenu ul li a.active,
+.FaqMenu ul li a:hover {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--green-text-color);
+}
+
+.FaqCont {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+}
+
+.FaqCont .HD2 {
+  text-align: left;
+  padding-left: 40px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--green-text-color);
+}
+
+.FaqCont .bg-title {
+  padding: 0 0 25px 40px;
+}
+
+.FaqCont .bg-title span {
+  padding: 21px 0;
+}
+
+.FaqCont .bg-title span::after {
+  background-size: cover;
+  height: 70px;
+  width: 70px;
+  margin-left: -28px;
+}
+
+.FaqCont__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.FaqCont__item {
+  width: 48%;
+  border: 1px solid #D3D3D3;
+  border-radius: 5px;
+  padding: 40px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.FaqCont__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--green-text-color);
+  padding-right: 40px;
+  padding-bottom: 20px;
+}
+
+.FaqCont__text {
+  display: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--green-text-color);
+}
+
+.FaqTrigger {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 20px;
+  height: 20px;
+  background: url("../images/arrow-down-up.svg") center top no-repeat;
+}
+
+.FaqTrigger:hover {
+  cursor: pointer;
+}
+
+.FaqTrigger.up {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 /*# sourceMappingURL=layout.css.map */
 
 @media only screen and (max-width: 1140px) {
@@ -3306,6 +3450,25 @@ a.OrderAudio__download:hover {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 240px;
     flex: 0 0 240px;
+  }
+
+  .FaqSidebar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 240px;
+    flex: 0 0 240px;
+  }
+
+  .FaqCont__item {
+    padding: 15px;
+  }
+
+  .FaqCont__title {
+    padding-right: 25px;
+  }
+
+  .FaqTrigger {
+    top: 20px;
+    right: 20px;
   }
 }
 
@@ -3627,6 +3790,21 @@ a.OrderAudio__download:hover {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     margin-bottom: 20px;
+  }
+
+  .Faq {
+    margin-bottom: 40px;
+  }
+
+  .FaqSidebar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+
+  .FaqCont__item {
+    width: 100%;
   }
 }
 
