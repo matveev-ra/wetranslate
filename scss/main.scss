@@ -3125,6 +3125,160 @@ header {
 
 
 
+.Support {
+  margin-bottom: 100px;
+  @include max-s(768px){
+    margin-bottom: 40px; 
+  }
+}
+
+.Support__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+  .HD-page {
+    margin-bottom: 0;
+
+    @include max-s(768px){
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px; 
+    }
+  }
+
+  .btn-orange {
+    width: auto;
+    @include max-s(768px){
+      margin: 0 auto;
+    }
+  }
+}
+
+
+
+
+.SupTabs {
+
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 30px;
+  }
+
+  &__tab {
+    &:not(:last-child) {
+      margin-right: 20px;
+      @include max-s(768px){
+        margin-right: 0;
+      }
+    }
+     @include max-s(768px){
+       width: 100%;
+       margin-right: 0;
+       margin-bottom: 10px; 
+     }
+  }
+
+  &__body {}
+
+  &__cont {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+  }
+}
+
+
+
+.Question {
+  $this:&;
+  padding: 40px;
+  border: 1px solid #D3D3D3;
+  border-radius: 5px;
+  margin-bottom: 30px;
+
+    @include max-s(768px){
+      padding: 15px;
+    }
+
+
+  &__title {
+    @include font700(22px,26px);
+    color: var(--green-text-color);
+    margin-bottom: 20px;
+
+    @include max-s(768px){
+      @include font700(18px,22px);
+    }
+
+    span {
+      @include font400(14px, 19px);
+      color: #fff;
+      border-radius: 3px;
+      padding: 5px 8px;
+      margin-left: 10px;
+
+        @include max-s(768px){
+          display: block;
+          margin-left: 0;
+          margin-top: 5px;
+        }
+
+      &.label-red {
+        background: linear-gradient(37.71deg, #FF6056 6.17%, #FD3F61 94.94%);
+      }
+      &.label-orange {
+        background: linear-gradient(93.7deg, #FC9102 -10.98%, #FFA32E 108.23%);
+      }
+      &.label-green {
+        background: linear-gradient(93.7deg, #66A882 -10.98%, #488774 108.23%);
+      }
+    }
+
+    
+    
+  }
+
+  &__text {
+    @include font400(14px,19px);
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+   a#{$this}__more {
+    @include font700(16px,18px);
+    color: var(--green-text-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__date {
+    @include font400(14px,18px);
+    color: var(--green-text-color);
+  }
+}
+
+
+
+
+
+
 
 
 
