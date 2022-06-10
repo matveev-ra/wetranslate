@@ -2389,6 +2389,10 @@ a.dropfiles__name:hover {
   margin-bottom: 35px;
 }
 
+.Order-view {
+  margin-bottom: 100px;
+}
+
 .Order {
   border: 1px solid #D3D3D3;
   border-radius: 5px;
@@ -3380,6 +3384,10 @@ a.OrderAudio__download:hover {
   justify-content: end;
 }
 
+.Feedback__bottom .btn-orange {
+  width: auto;
+}
+
 .Feedback__addFiles {
   position: relative;
   margin-right: 30px;
@@ -3415,8 +3423,116 @@ a.OrderAudio__download:hover {
   cursor: pointer;
 }
 
-.Feedback .btn-orange {
-  width: auto;
+.Ticket {
+  padding: 40px;
+  border: 1px solid #D3D3D3;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
+
+.Ticket__back {
+  margin-bottom: 20px;
+}
+
+.Ticket__back a {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #D3D3D3;
+  position: relative;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+.Ticket__back a::before {
+  content: '←';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Ticket__back a:hover {
+  text-decoration: underline;
+}
+
+.Ticket__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: var(--green-text-color);
+  margin-bottom: 40px;
+}
+
+.TicketTC {
+  background: #F7F7F7;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+}
+
+.TicketTC__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.TicketTC__ava {
+  margin-right: 20px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25px;
+  flex: 0 0 25px;
+}
+
+.TicketTC__ava img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.TicketTC__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+
+.TicketTC__mess {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+
+.TicketTC__img {
+  margin-top: 20px;
+}
+
+.TicketTC__img img {
+  width: 54px;
+  height: 54px;
+  margin-right: 15px;
+}
+
+.TicketAnswer {
+  background: -o-linear-gradient(356.3deg, #66A882 -10.98%, #488774 108.23%);
+  background: linear-gradient(93.7deg, #66A882 -10.98%, #488774 108.23%);
+  border-radius: 8px;
+  margin-left: 70px;
+}
+
+.TicketAnswer .TicketTC__title,
+.TicketAnswer .TicketTC__mess {
+  color: #fff;
 }
 
 /*# sourceMappingURL=layout.css.map */
@@ -4000,6 +4116,10 @@ a.OrderAudio__download:hover {
     order: 1;
   }
 
+  .Order-view {
+    margin-bottom: 40px;
+  }
+
   .Order__top {
     margin-bottom: 20px;
   }
@@ -4097,6 +4217,14 @@ a.OrderAudio__download:hover {
   .Feedback {
     padding: 15px;
     margin-bottom: 40px;
+  }
+
+  .Ticket {
+    padding: 15px;
+  }
+
+  .TicketAnswer {
+    margin-left: 15px;
   }
 }
 
