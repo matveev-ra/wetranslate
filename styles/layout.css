@@ -2662,6 +2662,31 @@ a.Docfile__name:hover {
   text-decoration: underline;
 }
 
+.MyBlance2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.MyBlance2 .MyBlance__info {
+  margin-right: 30px;
+  margin-left: 20px;
+}
+
+.MyBlance2 .btn-orange {
+  text-align: center;
+  width: auto;
+  margin-bottom: 0;
+}
+
 .Orders-filtr__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3745,6 +3770,11 @@ a.OrderAudio__download:hover {
   align-items: center;
 }
 
+.CashIn__bottom .btn-orange {
+  width: 166px;
+  margin-bottom: 20px;
+}
+
 .CashIn__payall {
   font-weight: 400;
   font-size: 16px;
@@ -3760,11 +3790,6 @@ a.OrderAudio__download:hover {
   line-height: 28px;
   color: #131313;
   padding-left: 20px;
-}
-
-.CashIn .btn-orange {
-  width: 166px;
-  margin-bottom: 20px;
 }
 
 .CashInput {
@@ -3859,6 +3884,77 @@ a.OrderAudio__download:hover {
   border: 2px solid #66A882;
   margin: -1px;
   cursor: pointer;
+}
+
+.CashIn-list__cont {
+  background: -o-radial-gradient(61.22% 52.91%, 26.25% 99.93%, #FFFFFF 0%, #FFFFFF 100%);
+  background: radial-gradient(26.25% 99.93% at 61.22% 52.91%, #FFFFFF 0%, #FFFFFF 100%);
+  -webkit-box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.Payments {
+  overflow: auto;
+}
+
+.Payments table {
+  width: 100%;
+}
+
+.Payments table tr:nth-child(even) {
+  background: #f3f3f3;
+}
+
+.Payments table tr th:nth-child(1) {
+  width: 20%;
+}
+
+.Payments table tr th:nth-child(2) {
+  width: 15%;
+}
+
+.Payments table tr th:nth-child(3) {
+  width: 20%;
+}
+
+.Payments table tr th:nth-child(4) {
+  width: 20%;
+}
+
+.Payments table tr th:nth-child(5) {
+  width: 25%;
+}
+
+.Payments table tr th,
+.Payments table tr td {
+  text-align: left;
+}
+
+.Payments table tr th {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #757575;
+  padding: 10px 5px;
+}
+
+.Payments table tr td {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #757575;
+  padding: 8px 5px;
+}
+
+.Payments table tr td.green {
+  color: #66A882;
+}
+
+.Payments table tr td.red {
+  color: #FF6056;
 }
 
 /*# sourceMappingURL=layout.css.map */
@@ -4113,6 +4209,21 @@ a.OrderAudio__download:hover {
     margin-left: 0;
     text-align: center;
     margin-bottom: 15px;
+  }
+
+  .MyBlance2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: end;
+  }
+
+  .MyBlance2 .MyBlance__info {
+    margin-right: 0px;
+    margin-bottom: 20px;
   }
 
   .NewsItem__img {
@@ -4595,14 +4706,22 @@ a.OrderAudio__download:hover {
     flex-wrap: wrap;
   }
 
+  .CashIn__bottom .btn-orange {
+    margin: 0 auto;
+  }
+
   .CashIn__payall {
     width: 100%;
     margin: 0 0 20px 0;
     text-align: center;
   }
 
-  .CashIn .btn-orange {
-    margin: 0 auto;
+  .CashIn-list__cont {
+    padding: 10px;
+  }
+
+  .Payments table {
+    width: 660px;
   }
 }
 

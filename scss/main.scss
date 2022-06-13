@@ -2582,6 +2582,38 @@ header {
   }
 }
 
+.MyBlance2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+
+  @include max-s(992px){
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .MyBlance__info{
+    margin-right: 30px;
+    margin-left: 20px;
+
+    @include max-s(992px){
+      margin-right: 0px;
+     margin-bottom: 20px;
+    }
+  }
+  
+  .btn-orange {
+    text-align: center;
+    width: auto;
+    margin-bottom: 0;
+  }
+
+
+
+
+}
+
 
 .Orders-filtr {
   &__bottom {
@@ -3620,9 +3652,10 @@ header {
 
 .CashIn {
   margin-bottom: 100px;
-    @include max-s(768px){
-      margin-bottom: 40px; 
-    }
+
+  @include max-s(768px) {
+    margin-bottom: 40px;
+  }
 
 
   &__top {
@@ -3631,21 +3664,22 @@ header {
     justify-content: space-between;
     margin-bottom: 40px;
 
-      
-      
+
+
     .HD-page {
       margin-bottom: 0px;
 
-      @include max-s(768px){
+      @include max-s(768px) {
         width: 100%;
         text-align: center;
         margin-bottom: 20px;
       }
     }
   }
+
   .CashIn__balance {
-    @include max-s(768px){
-      width: 100%; 
+    @include max-s(768px) {
+      width: 100%;
     }
   }
 
@@ -3659,54 +3693,53 @@ header {
     padding: 40px;
     margin-bottom: 40px;
 
-      @include max-s(768px){
-        padding: 10px; 
-        flex-wrap: wrap;
-      }
+    @include max-s(768px) {
+      padding: 10px;
+      flex-wrap: wrap;
+    }
   }
 
   &__cont-titile {
-    @include font400(14px,17px);
+    @include font400(14px, 17px);
     color: #757575;
     margin-bottom: 10px;
   }
 
   &__bottom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: end;
-  align-items: center;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
 
-&__payall {
-  @include font400(16px, 19px);
-  color: #131313;
-  margin-right: 40px;
-  margin-bottom: 20px;
+    .btn-orange {
+      width: 166px;
+      margin-bottom: 20px;
 
-    @include max-s(768px){
+      @include max-s(768px) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__payall {
+    @include font400(16px, 19px);
+    color: #131313;
+    margin-right: 40px;
+    margin-bottom: 20px;
+
+    @include max-s(768px) {
       width: 100%;
       margin: 0 0 20px 0;
       text-align: center;
     }
 
-  span {
-    @include font700(24px, 28px);
-    color: #131313;
-    padding-left: 20px;
+    span {
+      @include font700(24px, 28px);
+      color: #131313;
+      padding-left: 20px;
+    }
   }
-}
 
-.btn-orange {
-  width: 166px;
-  margin-bottom: 20px;
-
-  @include max-s(768px){
-    margin: 0 auto; 
-  }
-}
-
-  
 }
 
 .CashInput {
@@ -3772,6 +3805,81 @@ header {
 
 }
 
+.CashIn-list {
+  .CashIn__top {
+    .HD-page {
+      @include max-s(992px) {
+        //width: 100%;
+        //margin-bottom: 20px;
+      }
+    }
+    .CashIn__balance {
+      @include max-s(992px){
+        //width: 100%; 
+      }
+    }
+    
+  }
+
+  &__cont {
+    background: radial-gradient(26.25% 99.93% at 61.22% 52.91%, #FFFFFF 0%, #FFFFFF 100%);
+    box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 40px;
+    margin-bottom: 40px;
+
+    @include max-s(768px){
+      padding: 10px; 
+    }
+  }
+}
+
+
+.Payments {
+  overflow: auto ;
+  table {
+    width: 100%;
+    @include max-s(768px){
+       width: 660px;
+    }
+
+    tr {
+      &:nth-child(even) {
+        background: #f3f3f3;
+      }
+      th:nth-child(1) {width: 20%;}
+      th:nth-child(2) {width: 15%;}
+      th:nth-child(3) {width: 20%;}
+      th:nth-child(4) {width: 20%;}
+      th:nth-child(5) {width: 25%;}
+ 
+      
+      
+
+      th, td  {
+        text-align: left;
+      }
+      th {
+       @include font400(14px,17px);
+       color: #757575; 
+       padding:  10px 5px;
+      }
+
+      td {
+        @include font700(16px,19px);
+        color: #757575; 
+        padding: 8px 5px;
+        &.green {
+          color: #66A882;
+        }
+        &.red {
+          color: #FF6056;
+        }
+      }
+
+    }
+  }  
+}
 
 
 

@@ -149,44 +149,100 @@
 
         
         
-        <div class="CashIn">
+        <div class="CashIn CashIn-list">
           <div class="CashIn__top">
             <h1 class="HD-page">Пополнение счета</h1>
             <div class="CashIn__balance">
-              <div class="MyBlance">
+              <div class="MyBlance MyBlance2">
                 <div class="MyBlance__info">Мой баланс: <span>€8,811</span></div>
-                <div class="MyBlance__cashIn"><a href="">Мои платежи →</a></div>
+                <a class="btn-orange" href="">Пополнить баланс</a>
               </div>
               <!-- /MyBlance-->
             </div>
           </div>
-          <div class="CashIn__cont">
-            <div class="CashInput">
-              <div class="CashIn__cont-titile">Введите сумму пополнения</div>
-              <input type="text" placeholder="€300">
-            </div>
-            <div class="CashCheckPay">
-              <div class="CashIn__cont-titile">Введите сумму пополнения</div>
-              <div class="CashCheckPay__wrap">
-                <div class="CashCheckPay__item"><img src="images/icon-pay01.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay02.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay03.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay04.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay01.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay02.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay03.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay04.png" alt=""></div>
-              </div>
-            </div>
+          <div class="CashIn-list__cont"> 
+            <div class="Payments">
+              <table>
+                <tr>
+                  <th>Назначение платежа</th>
+                  <th>Сумма</th>
+                  <th>Тип платежа</th>
+                  <th>Состояние</th>
+                  <th>Дата</th>
+                </tr>
+                <tr>
+                  <td>Пополнение баланса</td>
+                  <td class="green">+ €500</td>
+                  <td>Inner Payment</td>
+                  <td>Отменено</td>
+                  <td>01.04.2022, 01:31:49</td>
+                </tr>
+                <tr>
+                  <td>Оплата заказа #151</td>
+                  <td class="red">- €28.3</td>
+                  <td>Inner Payment</td>
+                  <td>Подтверждено</td>
+                  <td>01.04.2022, 01:31:49</td>
+                </tr>
+                <tr>
+                  <td>Оплата заказа #50</td>
+                  <td class="red">- €28.3</td>
+                  <td>Inner Payment</td>
+                  <td>Подтверждено</td>
+                  <td>01.04.2022, 01:31:49</td>
+                </tr>
+                <tr>
+                  <td>Пополнение баланса</td>
+                  <td class="green">+ €500</td>
+                  <td>Inner Payment</td>
+                  <td>Подтверждено</td>
+                  <td>01.04.2022, 01:31:49</td>
+                </tr>
+                <tr>
+                  <td>Пополнение баланса</td>
+                  <td class="green">+ €500</td>
+                  <td>Inner Payment</td>
+                  <td>Подтверждено</td>
+                  <td>01.04.2022, 01:31:49</td>
+                </tr>
+                <tr>
+                  <td>Пополнение баланса</td>
+                  <td class="green">+ €500</td>
+                  <td>Inner Payment</td>
+                  <td>В ожидании</td>
+                  <td>01.04.2022, 01:31:49</td>
+                </tr>
+                <tr>
+                  <td>Пополнение баланса</td>
+                  <td class="green">+ €500</td>
+                  <td>Inner Payment</td>
+                  <td>Подтверждено</td>
+                  <td>01.04.2022, 01:31:49</td>
+                </tr>
+                
+              </table>
+
+
+
+              <!-- <div class="Payments__thead">
+                <div class="Payments__th"></div>
+                <div class="Payments__th"></div>
+                <div class="Payments__th"></div>
+                <div class="Payments__th"></div>
+              </div>   
+              <div class="Payments__body">
+                <div class="Payments__tr">
+                  <div class="Payments__td"></div>
+                </div>
+                <div class="Payments__tr"></div>
+                <div class="Payments__tr"></div>
+                <div class="Payments__tr"></div>
+              </div> -->
+            
           </div>
           <!-- /CashIn__wrap-->
 
-          <div class="CashIn__bottom">
-            <div class="CashIn__payall">
-              Сумма к оплате (+налог 10%): <span>€300</span>
-            </div>
-            <button class="btn-orange">пополнить</button>
-          </div>
+          
 
         </div>
         <!-- /CashIn-->
