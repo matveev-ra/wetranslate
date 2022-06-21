@@ -1595,39 +1595,68 @@ header {
     }
 
   &__item {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
     width: 32%;
-    border: 1px solid #D3D3D3;
-    border-radius: 5px;
 
-    @include max-s(768px){
-      width: 100%; 
-    }
+
+      @include max-s(768px){
+        width: 100%; 
+      }
+
     &:not(:last-child) {
       @include max-s(768px){
         margin-bottom: 20px; 
       }
     }
 
-    &.active, &:hover  {
-      background: linear-gradient(93.7deg, #FC9102 -10.98%, #FFA32E 108.23%);
-      box-shadow: 9px 8px 17px rgba(252, 144, 0, 0.45);
-      border: 1px solid #FC9102;
-      cursor: pointer;
+    label {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: stretch;
+      border: 1px solid #D3D3D3;
+      border-radius: 5px;
 
-      .TypeTranslate__tarif {
-        background: #FE8900;
+      &:hover  {
+        background: linear-gradient(93.7deg, #FC9102 -10.98%, #FFA32E 108.23%);
+        box-shadow: 9px 8px 17px rgba(252, 144, 0, 0.45);
+        border: 1px solid #FC9102;
+        cursor: pointer;
+  
+        .TypeTranslate__tarif {
+          background: #FE8900;
+        }
+        .TypeTranslate__text-title {
+          color: #fff;
+        }
+        .TypeTranslate__text-category {
+          color: #9C5900;
+        }
+  
       }
-      .TypeTranslate__text-title {
-        color: #fff;
-      }
-      .TypeTranslate__text-category {
-        color: #9C5900;
-      }
+    }
 
+    
+
+    input {
+      display: none;
+
+      &:checked + label {
+        background: linear-gradient(93.7deg, #FC9102 -10.98%, #FFA32E 108.23%);
+        box-shadow: 9px 8px 17px rgba(252, 144, 0, 0.45);
+        border: 1px solid #FC9102;
+        cursor: pointer;
+  
+        .TypeTranslate__tarif {
+          background: #FE8900;
+        }
+        .TypeTranslate__text-title {
+          color: #fff;
+        }
+        .TypeTranslate__text-category {
+          color: #9C5900;
+        }
+      }
+      
     }
 
   }
@@ -1641,6 +1670,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -1px;
+    border-radius: 5px 0 0 5px
   }
 
   &__tarif-price {
@@ -1801,6 +1832,13 @@ header {
       left: -10px;
     }
 
+    &.ShadowNo {
+      background: none;
+      right: unset;
+      left: unset;
+      bottom: unset;
+    } 
+
 }
 
 
@@ -1810,6 +1848,7 @@ header {
     border: 1px solid #0F4D52;
     border-radius: 5px;
     padding: 24px 24px 50px;
+    margin-bottom: 20px;
 
     @include max-s(576px)  {
       padding: 10px;
@@ -4022,5 +4061,16 @@ header {
 }
 
 
+.MakeTabs {
+
+  &__cont { 
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+  }
+}
 
 

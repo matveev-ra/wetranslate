@@ -62,7 +62,7 @@
 
 	    				</ul>
 	    				<div class="Top-info2">
-	    					<div class="LogOut"><a href="">Войти</a></div>
+	    					<!-- <div class="LogOut"><a href="">Войти</a></div> -->
 	    					<div class="Flag">
 	    						<div class="Flag__select selectlink-js">
 	    							<span class="rus">RUS</span>
@@ -85,39 +85,8 @@
 	    				</div>
 	    			</div>
 	    		</nav>
-          <div class="UserInfo">
-            <div class="IconProfile">
-              <div class="IconUser">DT</div>
-              <div class="IconProfile__arrow"></div>
-            </div>
-
-            <div class="ProfPanel" >
-              <div class="ProfPanel__user">
-                <div class="IconUser">DT</div>
-                <div class="ProfPanel__info">
-                  <div class="email">exampleexampleexample@gmail.com</div>
-                  <div class="name">Сергеев Алексей</div>
-                </div>
-              </div>
-              <div class="ProfPanel__menu">
-                <ul>
-                  <li>
-                    <a href="">Мой профиль</a>
-                    <a href="">Мои заказы</a>
-                    <a href="">Мои транзакции</a>
-                    <a href="">Пополнить счет</a>
-                    <a href="">Logout</a>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-
-            
-          
-          </div>
+          <div class="LogOut"><a href="">ВОЙТИ</a></div>
 	    		<div class="Top-info">
-	    			
 	    			<div class="Flag">
 	    				<div class="Flag__select selectlink-js">
 	    					<span class="rus">RUS</span>
@@ -152,107 +121,227 @@
 
         <div class="MTranslate">
           <div class="MTranslate__wrap">
-
-            <div class="MTranslate__fields">
-              <div class="MTranslate__fields-item">
-                <div class="MTranslate__fields-hd">Язык оригинала</div>
-                <div class="Field">
-                  <select name="language1" >
-                    <option>Select language</option>
-                    <option value="2">Englsh</option>
-                    <option value="3">Spanish</option>
-                    <option value="3">German</option>
-                  </select>
-                </div>
-              </div>
-              <div class="MTranslate__fields-row"></div>
-              <div class="MTranslate__fields-item">
-                <div class="MTranslate__fields-hd">Перевести на</div>
-                <div class="Field">
-                  <select name="language1" >
-                    <option>Select language</option>
-                    <option value="2">Englsh</option>
-                    <option value="3">Spanish</option>
-                    <option value="3">German</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <!--/MTranslate__fields -->
-
-            <div class="TypeTranslate">
-              <div class="TypeTranslate__item active">
-                <div class="TypeTranslate__tarif">
-                  <div class="TypeTranslate__tarif-price">$0.14</div>
-                  <div class="TypeTranslate__tarif-row"></div>
-                  <div class="TypeTranslate__tarif-text">word</div>
-                </div>
-                <div class="TypeTranslate__text">
-                  <div class="TypeTranslate__text-title">Основные переводы</div>
-                  <div class="TypeTranslate__text-category">Сайты | Отчеты</div>
-                </div>
-              </div>
-              <div class="TypeTranslate__item">
-                <div class="TypeTranslate__tarif">
-                  <div class="TypeTranslate__tarif-price">$0.14</div>
-                  <div class="TypeTranslate__tarif-row"></div>
-                  <div class="TypeTranslate__tarif-text">word</div>
-                </div>
-                <div class="TypeTranslate__text">
-                  <div class="TypeTranslate__text-title">Деловой перевод</div>
-                  <div class="TypeTranslate__text-category">Маркетинг | Кореспонденция</div>
-                </div>
-              </div>
-              <div class="TypeTranslate__item">
-                <div class="TypeTranslate__tarif">
-                  <div class="TypeTranslate__tarif-price">$0.14</div>
-                  <div class="TypeTranslate__tarif-row"></div>
-                  <div class="TypeTranslate__tarif-text">word</div>
-                </div>
-                <div class="TypeTranslate__text">
-                  <div class="TypeTranslate__text-title">Литературный перевод</div>
-                  <div class="TypeTranslate__text-category">Поэзия  |  Поговорки</span></div>
-                </div>
-              </div>
-            </div>
-            <!--/TypeTranslate -->
-
-            <div class="MTranslate__wrap2">
-              <div class="VidTranslate">
-                <button class="btn-default active">Перевести текст</button>
-                <button class="btn-default">Перевести файлы</button>
-                <button class="btn-default">Перевести аудио</button>
-              </div>
-              <!-- /VidTranslate -->
-
-            
-              <div class="DownloadTrans">
-                <textarea name="" id="" >Введите текст для перевода</textarea>
-              </div>
-              <!-- /DownloadTrans -->
-
-              <div class="InfoTrans">
-                <div class="InfoTrans__left">
-                  <div class="InfoTrans__summ">
-                    Итого : € 4.94
-                    <span>3 unit × € 1,65</span>
+            <form action="">
+              <div class="MTranslate__fields">
+                <div class="MTranslate__fields-item">
+                  <div class="MTranslate__fields-hd">Язык оригинала</div>
+                  <div class="Field">
+                    <select name="language1" id="inputlanguage1">
+                      <option value="">Select language</option>
+                      <option value="Englsh">Englsh</option>
+                      <option value="Spanish">Spanish</option>
+                      <option value="German">German</option>
+                    </select>
                   </div>
                 </div>
-                <div class="InfoTrans__right">
-                  <div class="InfoTrans__balans">Баланс счета: € 1,65 </div>
-                  <div class="InfoTrans__btn">
-                    <button class="btn-orange">заказать перевод</button>
+                <div class="MTranslate__fields-row"></div>
+                <div class="MTranslate__fields-item">
+                  <div class="MTranslate__fields-hd">Перевести на</div>
+                  <div class="Field">
+                    <select name="language2"  id="inputlanguage2">
+                      <option value="">Select language</option>
+                      <option value="Englsh">Englsh</option>
+                      <option value="Spanish">Spanish</option>
+                      <option value="German">German</option>
+                    </select>
                   </div>
                 </div>
               </div>
-              <!--/InfoTrans -->
+              <!--/MTranslate__fields -->
 
-            </div>
-            <!-- /MTranslate__wrap2 -->
+              <div class="TypeTranslate">
+                <div class="ShadowWrap" id="TypeTranslate"></div>
+                <div class="TypeTranslate__item">
+                  <input id="radio1" type="radio" name="usluga" value="Основные переводы" />
+                  <label for="radio1">
+                    <div class="TypeTranslate__tarif">
+                      <div class="TypeTranslate__tarif-price">$0.14</div>
+                      <div class="TypeTranslate__tarif-row"></div>
+                      <div class="TypeTranslate__tarif-text">word</div>
+                    </div>
+                    <div class="TypeTranslate__text">
+                      <div class="TypeTranslate__text-title">Основные переводы</div>
+                      <div class="TypeTranslate__text-category">Сайты | Отчеты</div>
+                    </div>
+                  </label>
+                </div>
+                <div class="TypeTranslate__item">
+                  <input id="radio2" type="radio" name="usluga" value="Деловой перевод" />
+                  <label for="radio2">
+                    <div class="TypeTranslate__tarif">
+                      <div class="TypeTranslate__tarif-price">$0.14</div>
+                      <div class="TypeTranslate__tarif-row"></div>
+                      <div class="TypeTranslate__tarif-text">word</div>
+                    </div>
+                    <div class="TypeTranslate__text">
+                      <div class="TypeTranslate__text-title">Деловой перевод</div>
+                      <div class="TypeTranslate__text-category">Маркетинг | Кореспонденция</div>
+                    </div>
+                  </label>
+                </div>
+                <div class="TypeTranslate__item">
+                  <input id="radio3" type="radio" name="usluga" value="Литературный перевод" />
+                  <label for="radio3">
+                    <div class="TypeTranslate__tarif">
+                      <div class="TypeTranslate__tarif-price">$0.14</div>
+                      <div class="TypeTranslate__tarif-row"></div>
+                      <div class="TypeTranslate__tarif-text">word</div>
+                    </div>
+                    <div class="TypeTranslate__text">
+                      <div class="TypeTranslate__text-title">Литературный перевод</div>
+                      <div class="TypeTranslate__text-category">Поэзия  |  Поговорки</span></div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <!--/TypeTranslate -->
+
+              <div class="MTranslate__wrap2">
+                <div class="ShadowWrap" id="VidTranslate"></div>
+
+                <div class="MakeTabs">
+                  <div class="VidTranslate MakeTabs__head">
+                    <button class="MakeTabs__tab btn-default active">Перевести текст</button>
+                    <button class="MakeTabs__tab btn-default">Перевести файлы</button>
+                    <button class="MakeTabs__tab btn-default">Перевести аудио</button>
+                  </div>
+                  <!-- /VidTranslate -->
+                  <div class="MakeTabs__body">
+
+                    <div class="DownloadTrans MakeTabs__cont active">
+                      <textarea name="" id="" >Введите текст для перевода</textarea>
+                    </div>
+                    <!-- /DownloadTrans -->
+                    
+                    <div class="DownloadTrans MakeTabs__cont">
+                      <div class="dropdown">
+                        <div class="dropdown__wrap">
+                          <div class="dropdown__info">
+                            <div class="dropdown__icon"><img src="images/Icon-dropdown.svg" alt=""></div>
+                            <div class="dropdown__desc">Перетащите файл сюда</div>
+                            <div class="dropdown__tipfiles">txt, odt, pdf, docx.</div>
+                          </div>
+                        </div>
+                        <button class="btn-green">Выбрать файл</button>
+                      </div>
+
+                      <div class="dropdown ">
+                        <div class="dropfiles">
+      
+                            <div class="dropfiles__item">
+                              <div class="dropfiles__icon pdf"><img src="images/icon-file-pdf.svg" alt=""></div>
+                              <div class="dropfiles__name">Документ об оказании услуг Документ об оказании услуг.pdf</div>
+                              <div class="dropfiles__filesize">438 kb</div>
+                              <div class="dropfiles__close"></div>
+                            </div>
+                            <div class="dropfiles__item">
+                              <div class="dropfiles__icon txt"><img src="images/icon-file-txt.svg" alt=""></div>
+                              <div class="dropfiles__name">Файл на перевод.txt</div>
+                              <div class="dropfiles__filesize">438 kb</div>
+                              <div class="dropfiles__close"></div>
+                            </div>
+                            <div class="dropfiles__item">
+                              <div class="dropfiles__icon doc"><img src="images/icon-file-txt.svg" alt=""></div>
+                              <div class="dropfiles__name">Файл на перевод.doc</div>
+                              <div class="dropfiles__filesize">438 kb</div>
+                              <div class="dropfiles__close"></div>
+                            </div>
+                            <div class="dropfiles__item">
+                              <div class="dropfiles__icon odt"><img src="images/icon-file-odt.svg" alt=""></div>
+                              <div class="dropfiles__name">Файл на перевод.odt</div>
+                              <div class="dropfiles__filesize">2118.kb</div>
+                              <div class="dropfiles__close"></div>
+                            </div>
+                          
+                        </div>
+                        <button class="btn-green">Выбрать файл</button>
+                      </div>
+                    </div>
+                    <!-- /DownloadTrans -->
+
+                    <div class="DownloadTrans MakeTabs__cont">
+
+                      <div class="DownloadAudio">
+      
+                        <div class="AudioRec">
+                          <div class="hd">Вы можете записать свой<br/> голосовой файл 
+                            <span class="hint--top  hint--large"
+                              
+                            data-hint="
+                            Вы можете выбрать готовый аудио-файл либо записать свой аудио-файл с возможностью приостановки записи. После нажатия кнопки СТОП создается файл, который попадает в форму для передачи и кроме этого вы его можете сохранить для своего дальнейшего использования. После повторного нажатия кнопки ЗАПИСЬ старый файл затирается, создается новый который после окончания записи попадает в форму для передачи
+                            ">
+                              
+                              <img src="images/icon-info.svg" alt="">
+                            </span>
+                          </div>
+                          <div class="AudioRec__btn">
+                            <button class="btn-pl btn-gray"><span>Record</span></button>
+                            <button class="btn-pl btn-orange"><span>Resume</span></button>
+                            <button class="btn-pl btn-green"><span>Stop & Save</span></button>
+                          </div>
+                        </div>
+      
+                        <div class="dropdown">
+                          <div class="dropdown__wrap">
+                            <div class="dropdown__info">
+                              <div class="dropdown__icon"><img src="images/Icon-dropdown.svg" alt=""></div>
+                              <div class="dropdown__desc">Перетащите файл сюда</div>
+                              <div class="dropdown__tipfiles">Mp3, wav, flac, aac</div>
+                            </div>
+                          </div>
+                          <button class="btn-green">Выбрать файл</button>
+                        </div>
+      
+                      </div>
+                      <!-- /DownloadAudio -->
+      
+                      <div class="OutputAudio">
+                        <div class="OutputAudio__item">
+                          <div class="OutputAudio__track">
+                            <audio src="audio.mp3" controls="controls" loop="loop"></audio>
+                          </div>
+                          <div class="OutputAudio__nametrack">Голосовая запись Голосовая запись (1)</div>
+                          <div class="OutputAudio__close"></div>
+                        </div>
+                        <div class="OutputAudio__item">
+                          <div class="OutputAudio__track">
+                            <audio src="audio.mp3" controls="controls" loop="loop"></audio>
+                          </div>
+                          <div class="OutputAudio__nametrack">Голосовая запись (1)</div>
+                          <div class="OutputAudio__close"></div>
+                        </div>
+                      </div> 
+      
+      
+      
+                    </div>
+                    <!-- /DownloadTrans -->
+                    
+
+                  </div>
+                </div>
+
+                <div class="InfoTrans">
+                  <div class="InfoTrans__left">
+                    <div class="InfoTrans__summ">
+                      Итого : € 4.94
+                      <span>3 unit × € 1,65</span>
+                    </div>
+                  </div>
+                  <div class="InfoTrans__right">
+                    <div class="InfoTrans__balans">Баланс счета: € 1,65 </div>
+                    <div class="InfoTrans__btn">
+                      <button class="btn-orange">заказать перевод</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- /InfoTrans-->
+              </div>
+              <!--/MTranslate__wrap2 -->
+            </form>
 
           </div>
           <!--/MTranslate__wrap -->
-
         </div>
         <!--/MTranslate -->
         

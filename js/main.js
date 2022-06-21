@@ -14,7 +14,7 @@ $(function () {
 
     $(window).resize(function(){
         var width = $(window).innerWidth();
-        console.log(width);
+        //console.log(width);
         if (width < 976) {
             $('.dropDownMenu > ul').addClass('accordeon');
         }else{
@@ -168,8 +168,8 @@ $(function () {
         $(this).toggleClass('active');
         $('.dropDownMenu').toggleClass('active');
     });
+    
     //закрыть боковое меню
-
     $('body #slide-close').on('click', function (e) {
         if ($('.dropDownMenu').hasClass('active')) {
             $('.dropDownMenu').removeClass('active');
@@ -191,8 +191,8 @@ $(function () {
     $('.IconProfile').on('click', function (e) {
         $(this).toggleClass('active');
         $('.ProfPanel').slideToggle();
-        
     });
+
     $(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $(".IconProfile"); // тут указываем ID элемента
 		if (!div.is(e.target) // если клик был не по нашему блоку
@@ -225,7 +225,57 @@ $(function () {
                 return false;
             });
         });
+
+        $(function(){
+
+            $(".MakeTabs .MakeTabs__tab").on("click", function(){
+                var tabs = $(".MakeTabs .MakeTabs__tab")
+                    cont = $(".MakeTabs .MakeTabs__cont");
+              // Удаляем классы active
+                tabs.removeClass("active");
+                cont.removeClass("active");
+              // Добавляем классы active
+                $(this).addClass("active");
+                cont.eq($(this).index()).addClass("active");
+                return false;
+            });
+        });
     
+
+    
+
+          $(".MTranslate").on('change', function () {
+                  var select1 = $("select#inputlanguage1 option:selected").val();
+                  var select2 = $("select#inputlanguage2 option:selected").val();
+                  var radio = $(".TypeTranslate__item input[type='radio']");
+
+                  //console.log(select1);
+                  //console.log(select2);
+
+                  if (select1 !== ''  && select2 !== '') {
+                      $("#TypeTranslate").addClass("ShadowNo");
+                      //console.log('ВЫБОР СДЕЛАН');
+                  } else {
+                      $("#TypeTranslate").removeClass("ShadowNo");
+                      //console.log('ВЫБОР неСДЕЛАН');
+                  }
+
+                  
+                  if (radio.is(':checked')){
+                    $("#VidTranslate").addClass("ShadowNo");
+                      console.log('включен');
+                    } else {
+                    $("#VidTranslate").removeClass("ShadowNo");
+                      console.log('выключен');
+                    }
+
+
+              });
+
+
+
+
+
 
 // form label
 // (function ($) {
