@@ -21,6 +21,10 @@
   touch-action: manipulation;
   -moz-backface-visibility: hidden;
   /* fix firefox animation glitch */
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .owl-carousel .owl-stage:after {
@@ -53,7 +57,11 @@
 .owl-carousel .owl-item {
   position: relative;
   min-height: 1px;
-  float: left;
+  /* float: left; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  
   -webkit-backface-visibility: hidden;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
