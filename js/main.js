@@ -274,6 +274,25 @@ $(function () {
 
 
 
+              var swiper = new Swiper(".swiper", {
+                //slidesPerView: 1,
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                freeMode: true,
+                //centeredSlides: false,
+                //slidesPerGroup: 1,
+                //loop: true,
+                //loopFillGroupWithBlank: true,
+                // pagination: {
+                //   el: ".swiper-pagination",
+                //   //clickable: true,
+                // },
+                navigation: {
+                  nextEl: ".swiper-button-n",
+                  prevEl: ".swiper-button-p" ,
+                },
+              });            
+
 
 
 
@@ -305,6 +324,9 @@ $(function () {
     
 //     $("html, body").animate({scrollTop: (top - 90)});
 // });
+
+
+
 
 
 

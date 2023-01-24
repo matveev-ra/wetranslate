@@ -919,7 +919,15 @@ header {
 
   &__wrap {
     width: 752px;
+    //width: 100%;
     text-align: center;
+    position: relative;
+    margin-right: 20px;
+
+    @include max-s(992px){
+      width: 90%; 
+      margin: 0 auto;
+    }
 
     .HD2 {
       margin-bottom: 70px;
@@ -935,26 +943,31 @@ header {
   }
 
   &__item {
-    flex: 0 0 362px;
+    flex: 0 0 244px;
     background: rgba(255, 255, 255, 0.85);
     box-shadow: inset -18.7px 18.7px 18.7px rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-    padding: 68px 43px 43px;
+    padding: 68px 10px 43px;
+    //margin: 0 5px 0 0;
     border: 1px solid #ebebeb;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 
-      @include max-s(992px){
-        padding: 68px 20px 20px;
-        flex: 0 0 48%;
-      }
-      @include max-s(768px){
-        padding: 68px 10px 20px;
-        flex: 0 0 47%;
-      }
-      @include max-s(440px){
-        flex: 1 1 100%;
-        margin-bottom: 20px;
-      }
+
+      // @include max-s(992px){
+      //   padding: 68px 20px 20px;
+      //   flex: 0 0 33%;
+      // }
+      // @include max-s(768px){
+      //   padding: 68px 10px 20px;
+      //   flex: 0 0 47%;
+      // }
+      // @include max-s(440px){
+      //   flex: 1 1 100%;
+      //   margin-bottom: 20px;
+      // }
   }
 
   &__top {
@@ -973,7 +986,7 @@ header {
   }
 
   &__title {
-    @include font500(24px,28px);
+    @include font500(22px,26px);
     color: var(--green-text-color);
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -1000,7 +1013,7 @@ header {
   }
 
   &__cost-doll {
-    @include font800(96px,69px);
+    @include font800(85px,69px);
     color: var(--green-text-color);
   }
 
@@ -1019,6 +1032,7 @@ header {
 
   &__text {
     margin-bottom: 35px;
+    flex:1 1;
     ul {
       list-style: disc;
       text-align: left;
@@ -1034,6 +1048,18 @@ header {
     justify-content: center;
   }
 }
+
+.Slider-price {
+  position: relative;
+  
+}
+.swiper-wrapper.Price-wrap-slider {
+  box-sizing: border-box;
+  height: auto;
+}
+
+
+
 
 .Reviews {
   background: url('../images/bg3.png') left 60px no-repeat;
@@ -1596,6 +1622,7 @@ header {
 
   &__item {
     width: 32%;
+    display: flex;
 
 
       @include max-s(768px){
@@ -1615,6 +1642,7 @@ header {
       align-items: stretch;
       border: 1px solid #D3D3D3;
       border-radius: 5px;
+      flex: 1 1;
 
       &:hover  {
         background: linear-gradient(93.7deg, #FC9102 -10.98%, #FFA32E 108.23%);
@@ -1696,7 +1724,11 @@ header {
     padding: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;  
+
+    p { 
+      padding-bottom: 0;
+    }
   }
 
   &__text-title {
