@@ -291,7 +291,10 @@ $(function () {
                   nextEl: ".swiper-button-n",
                   prevEl: ".swiper-button-p" ,
                 },
-              });            
+              });    
+         
+              
+
 
 
 
@@ -326,8 +329,32 @@ $(function () {
 // });
 
 
+});// end document ready
 
+// подключение к полям телефона перфикс и флаг страны     
+$(".phone-flag").each((i, e) => {
 
-
-
+    window.intlTelInput(e, {
+        // allowDropdown: false,
+        // autoHideDialCode: false,
+        // autoPlaceholder: "off",
+        // dropdownContainer: document.body,
+        // excludeCountries: ["us"],
+        // formatOnDisplay: false,
+        geoIpLookup: function(callback) {
+            $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "";
+            callback(countryCode);
+            });
+        },
+        // hiddenInput: "full_number",
+        initialCountry: "auto",
+        // localizedCountries: { 'de': 'Deutschland' },
+        // nationalMode: false,
+        // onlyCountries: ['ru', 'gb', 'ch', 'ca', 'do'],
+        // placeholderNumberType: "MOBILE",
+        // preferredCountries: ['cn', 'jp'],
+        // separateDialCode: true,
+        utilsScript: "js/utils.js",
+    });
 });
