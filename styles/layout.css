@@ -96,6 +96,49 @@ a.btn-orange:hover {
   box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
 }
 
+.btn-orange-auto,
+a.btn-orange-auto {
+  width: auto;
+  height: 48px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2px 18px;
+  background: -o-linear-gradient(356.3deg, #FC9102 -10.98%, #FFA32E 108.23%);
+  background: linear-gradient(93.7deg, #FC9102 -10.98%, #FFA32E 108.23%);
+  -webkit-box-shadow: 9px 8px 17px rgba(252, 144, 0, 0.45);
+  box-shadow: 9px 8px 17px rgba(252, 144, 0, 0.45);
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-orange-auto:hover,
+a.btn-orange-auto:hover {
+  background: -o-linear-gradient(356.3deg, #dd7e03 -10.98%, #d88b27 108.23%);
+  background: linear-gradient(93.7deg, #dd7e03 -10.98%, #d88b27 108.23%);
+  cursor: pointer;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -webkit-box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
+  box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
+}
+
 .btn-default,
 a.btn-default {
   width: auto;
@@ -176,6 +219,7 @@ a.btn-green:hover {
   transition: all 0.5s linear;
   -webkit-box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
   box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
+  color: #fff;
 }
 
 .btn-gray,
@@ -217,6 +261,7 @@ a.btn-gray:hover {
   transition: all 0.5s linear;
   -webkit-box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
   box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
+  color: #fff;
 }
 
 .btn-mini,
@@ -2467,6 +2512,10 @@ a.dropfiles__name:hover {
 
 .Orders .btn-orange {
   width: auto;
+  margin-bottom: 35px;
+}
+
+.Orders .btn-orange-auto {
   margin-bottom: 35px;
 }
 
