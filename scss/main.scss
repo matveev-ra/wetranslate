@@ -487,46 +487,113 @@ a {
           font-weight: 500;
         }
       }
-    span {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      align-items: center;
-      gap:10px;
-      @include font400(14px,34px);
-      color: #000;
+      span {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap:10px;
+        @include font400(14px,34px);
+        color: #000;
+        text-transform: uppercase;
+        
+        &::before {
+          content: ' ';
+          display: block;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &.active { }
+
+      // .rus {
+      //   &::before {
+      //     background-image: url("../images/icon-flag-rus.svg");
+      //   }
+      // }
+      // .eng {
+      //   &::before {
+      //     background-image: url("../images/icon-flag-eng.svg");
+      //   }
+      // }
+      // .fra {
+      //   &::before {
+      //     background-image: url("../images/icon-flag-fra.svg");
+      //   }
+      // }
+      // .ger {
+      //   &::before {
+      //     background-image: url("../images/icon-flag-ger.svg");
+      //   }
+      // }
+
+      .ru {
+        &::before {
+          background-image: url("../images/icon-flag-rus.svg");
+        }
+      }
       
-      &::before {
-        content: ' ';
-        display: block;
-        width: 20px;
-        height: 20px;
+      .en {
+        &::before {
+          background-image: url("../images/icon-flag-eng.svg");
+        }
+      }
+      
+      .fr {
+        &::before {
+          background-image: url("../images/icon-flag-fra.svg");
+        }
+      }
+      
+      .de {
+        &::before {
+          background-image: url("../images/icon-flag-ger.svg");
+        }
+      }
+      
+      .es {
+        &::before {
+          background-image: url("../images/icon-flag-spain.svg");
+        }
+      }
+      
+      .it {
+        &::before {
+          background-image: url("../images/icon-flag-italy.svg");
+        }
+      }
+      
+      .zh {
+        &::before {
+          background-image: url("../images/icon-flag-china.svg");
+        }
+      }
+      
+      .no {
+        &::before {
+          background-image: url("../images/icon-flag-norway.svg");
+        }
+      }
+      
+      .th {
+        &::before {
+          background-image: url("../images/icon-flag-thailand.svg");
+        }
+      }
+      
+      .pt {
+        &::before {
+          background-image: url("../images/icon-flag-portugal.svg");
+        }
+      }
+      
+      .sv {
+        &::before {
+          background-image: url("../images/icon-flag-sweden.svg");
+        }
       }
     }
-
-    &.active { }
-
-    .rus {
-      &::before {
-        background-image: url("../images/icon-flag-rus.svg");
-      }
-    }
-    .eng {
-      &::before {
-        background-image: url("../images/icon-flag-eng.svg");
-      }
-    }
-    .fra {
-      &::before {
-        background-image: url("../images/icon-flag-fra.svg");
-      }
-    }
-    .ger {
-      &::before {
-        background-image: url("../images/icon-flag-ger.svg");
-      }
-    }
-  }
 
   &__dropdown {
       display: none;
@@ -621,7 +688,7 @@ header {
       flex: 0 0 616px;
       margin-left: 84px;
 
-        @include max-s(1140px){
+        @include max-s(1150px){
           margin-left: 0px;
         }
         @include max-s(992px){
@@ -643,9 +710,15 @@ header {
     }
 
     &__text {
-      flex: 0 1 360px;
+      //flex: 0 1 360px;
+      flex: 0 1 40%;
       margin-top: 86px;
       margin-left: 15px;
+
+        @include max-s(1190px){
+          //flex: 0 1 380px;
+          //flex: 0 1 40%;
+        }
 
         @include max-s(992px){
           padding-bottom: 110px; 
@@ -655,14 +728,27 @@ header {
         }
 
         .HD1 {
+          //font-size: calc(25px + 16 * ((100vw - 320px) / (1920 - 320)));
+          font-size: 40px;
+          line-height: 50px; 
           margin-bottom: 20px;
+
+          @include max-s(1190px){
+            font-size: calc(25px + 16 * ((100vw - 320px) / (1920 - 320))); 
+            line-height: 35px; 
+          }
         }
     }
 
     &__text-desc {
-      @include font400(14px,18px);
-      color: #fff;
-      margin-bottom: 30px;
+      p, h2 {
+        @include font400(14px,18px);
+        color: #fff;
+        //margin-bottom: 0;
+      }
+      h2 {
+        margin-bottom: 20[x];
+      }
     }
 }
 

@@ -818,6 +818,7 @@ a.btn-mini:hover {
   font-size: 14px;
   line-height: 34px;
   color: #000;
+  text-transform: uppercase;
 }
 
 .Flag__select span::before {
@@ -827,20 +828,48 @@ a.btn-mini:hover {
   height: 20px;
 }
 
-.Flag__select .rus::before {
+.Flag__select .ru::before {
   background-image: url("../images/icon-flag-rus.svg");
 }
 
-.Flag__select .eng::before {
+.Flag__select .en::before {
   background-image: url("../images/icon-flag-eng.svg");
 }
 
-.Flag__select .fra::before {
+.Flag__select .fr::before {
   background-image: url("../images/icon-flag-fra.svg");
 }
 
-.Flag__select .ger::before {
+.Flag__select .de::before {
   background-image: url("../images/icon-flag-ger.svg");
+}
+
+.Flag__select .es::before {
+  background-image: url("../images/icon-flag-spain.svg");
+}
+
+.Flag__select .it::before {
+  background-image: url("../images/icon-flag-italy.svg");
+}
+
+.Flag__select .zh::before {
+  background-image: url("../images/icon-flag-china.svg");
+}
+
+.Flag__select .no::before {
+  background-image: url("../images/icon-flag-norway.svg");
+}
+
+.Flag__select .th::before {
+  background-image: url("../images/icon-flag-thailand.svg");
+}
+
+.Flag__select .pt::before {
+  background-image: url("../images/icon-flag-portugal.svg");
+}
+
+.Flag__select .sv::before {
+  background-image: url("../images/icon-flag-sweden.svg");
 }
 
 .Flag__dropdown {
@@ -916,22 +945,28 @@ header {
 
 .header__text {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 360px;
-  flex: 0 1 360px;
+  -ms-flex: 0 1 40%;
+  flex: 0 1 40%;
   margin-top: 86px;
   margin-left: 15px;
 }
 
 .header__text .HD1 {
+  font-size: 40px;
+  line-height: 50px;
   margin-bottom: 20px;
 }
 
-.header__text-desc {
+.header__text-desc p,
+.header__text-desc h2 {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #fff;
-  margin-bottom: 30px;
+}
+
+.header__text-desc h2 {
+  margin-bottom: 20 [x];
 }
 
 .About {
@@ -4245,7 +4280,14 @@ a.OrderAudio__download:hover {
 
 /*# sourceMappingURL=layout.css.map */
 
-@media only screen and (max-width: 1140px) {
+@media only screen and (max-width: 1190px) {
+  .header__text .HD1 {
+    font-size: calc(25px + 16 * ((100vw - 320px) / (1920 - 320)));
+    line-height: 35px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
   .header__img {
     margin-left: 0px;
   }

@@ -211,7 +211,7 @@ $(function () {
 
         });
 
-        $(function(){
+        // $(function(){
 
             $(".SupTabs .SupTabs__tab").on("click", function(){
                 var tabs = $(".SupTabs .SupTabs__tab")
@@ -224,9 +224,9 @@ $(function () {
                 cont.eq($(this).index()).addClass("active");
                 return false;
             });
-        });
+        // });
 
-        $(function(){
+        // $(function(){
 
             $(".MakeTabs .MakeTabs__tab").on("click", function(){
                 var tabs = $(".MakeTabs .MakeTabs__tab")
@@ -239,11 +239,11 @@ $(function () {
                 cont.eq($(this).index()).addClass("active");
                 return false;
             });
-        });
+        // });
     
 
     
-
+        //
           $(".MTranslate").on('change', function () {
                   var select1 = $("select#inputlanguage1 option:selected").val();
                   var select2 = $("select#inputlanguage2 option:selected").val();
@@ -263,17 +263,17 @@ $(function () {
                   
                   if (radio.is(':checked')){
                     $("#VidTranslate").addClass("ShadowNo");
-                      console.log('включен');
+                      //console.log('включен');
                     } else {
                     $("#VidTranslate").removeClass("ShadowNo");
-                      console.log('выключен');
+                      //console.log('выключен');
                     }
 
 
               });
 
 
-
+              // подключение слайдера swiper для блоков цен
               var swiper = new Swiper(".swiper", {
                 //slidesPerView: 1,
                 slidesPerView: "auto",
