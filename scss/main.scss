@@ -1836,19 +1836,19 @@ header {
   margin-bottom: 15px;
   position: relative;
 
-  .btn-default {
-    @include max-s(768px){
-      width: 100%; 
-    }
-  }
+  // .btn-default {
+  //   @include max-s(768px){
+  //     width: 100%; 
+  //   }
+  // }
 
-  .btn-default:not(:last-child) {
-    margin-right: 20px;
-      @include max-s(768px){
-        margin-right: 0;
-        margin-bottom: 10px;
-      }
-  }
+  // .btn-default:not(:last-child) {
+  //   //margin-right: 20px;
+  //     @include max-s(768px){
+  //       margin-right: 0;
+  //       margin-bottom: 10px;
+  //     }
+  // }
 }
 
 .DownloadTrans {
@@ -4192,6 +4192,140 @@ header {
     }
 
   }
+}
+
+
+.Vid-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+
+    @include max-s(768px){
+      width: 100%; 
+      margin-bottom: 10px;
+    }
+
+
+  &:not(:last-child) {
+    margin-right: 10px;
+
+    @include max-s(768px){
+      margin-right: 0;
+    }
+  }
+
+
+  &.active {
+
+    .btn-default{
+      background: linear-gradient(93.7deg, #FC9102 -10.98%, #FFA32E 108.23%);
+      color: #fff;
+      border: 1px solid #FC9102;
+      border-radius: 5px 0 0px 5px;
+    }
+  }
+
+  &__radio {
+    position: relative;
+    text-align: center;
+
+    @include max-s(768px){
+      width: 50%; 
+      padding: 2px 10px;
+    }
+
+    & input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      margin: 10px 0 0 7px;
+    }
+  }
+
+  &.active &__select {
+    display: block;
+  }
+
+  &__select {
+    display: none;
+    //width: 100%;
+    height: 40px;
+    appearance: none;
+    background:#fff url('../images/icon-select-arrow.svg') 95% 50% no-repeat;
+    border: 1px solid #0F4D52;
+    border-radius: 0 5px 5px 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #131313;
+    padding: 0 20px 0 10px;
+
+      @include max-s(768px){
+        width: 50%; 
+        
+      }
+  }
+
+    
+
+}
+
+
+.radio-btn {
+  display:inline-block;zoom:1;vertical-align:top;
+  margin-right: 20px;
+
+  & input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 7px;
+
+    &:checked + .radio__text:after {
+      opacity: 1;
+    }
+
+    &:disabled + .radio__text:after {
+      opacity: 0.25;
+    }
+
+    &:disabled + .radio__text:before {
+      opacity: 0.25;
+    }
+  }
+
+  .radio__text {
+    position: relative;
+    padding: 0 0 0 35px;
+    cursor: pointer;
+    @include fontN(15px, 18px);
+    color: #000;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 1px;
+      width: 16px;
+      height: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(93.7deg, #9001A0 -10.98%, #CB0FE0 108.23%);
+      opacity: 0;
+      transition: .2s;
+    }
+  }
+
 }
 
 

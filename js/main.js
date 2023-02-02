@@ -211,7 +211,7 @@ $(function () {
 
         });
 
-        // $(function(){
+        
 
             $(".SupTabs .SupTabs__tab").on("click", function(){
                 var tabs = $(".SupTabs .SupTabs__tab")
@@ -224,9 +224,9 @@ $(function () {
                 cont.eq($(this).index()).addClass("active");
                 return false;
             });
-        // });
+        
 
-        // $(function(){
+        
 
             $(".MakeTabs .MakeTabs__tab").on("click", function(){
                 var tabs = $(".MakeTabs .MakeTabs__tab")
@@ -237,9 +237,9 @@ $(function () {
               // Добавляем классы active
                 $(this).addClass("active");
                 cont.eq($(this).index()).addClass("active");
-                return false;
+                //return false;
             });
-        // });
+        
     
 
     

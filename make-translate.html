@@ -201,9 +201,48 @@
 
                 <div class="MakeTabs">
                   <div class="VidTranslate MakeTabs__head">
-                    <button class="MakeTabs__tab btn-default active">Перевести текст</button>
+
+                    <div class="Vid-item MakeTabs__tab active">
+                      <label for="text" class="Vid-item__radio   btn-default">
+                        <input type="radio" id="text" name="quest1" value="no" checked>
+                        <div class="radio__text">Перевести текст</div>
+                      </label>
+                      <select class="Vid-item__select" >
+                        <option selected>Перевести в ...</option>
+                        <option value="1">В файл</option>
+                        <option value="2">В аудио</option>
+                        <option value="3">В видео</option>
+                      </select>
+                    </div>
+
+                    <div class="Vid-item MakeTabs__tab ">
+                      <label for="fail" class="Vid-item__radio   btn-default">
+                        <input type="radio" id="fail" name="quest1" value="no">
+                        <div class="radio__text">Перевести файлы</div>
+                      </label>
+                      <select class="Vid-item__select" >
+                        <option selected>Перевести в ...</option>
+                        <option value="1">В файл</option>
+                        <option value="2">В аудио</option>
+                        <option value="3">В видео</option>
+                      </select>
+                    </div>
+
+                    <div class="Vid-item MakeTabs__tab">
+                      <label for="audio" class="Vid-item__radio   btn-default">
+                        <input type="radio" id="audio" name="quest1" value="no">
+                        <div class="radio__text">Перевести аудио</div>
+                      </label>
+                      <select class="Vid-item__select" >
+                        <option selected>Перевести в ...</option>
+                        <option value="1">В файл</option>
+                        <option value="2">В аудио</option>
+                        <option value="3">В видео</option>
+                      </select>
+                    </div>
+                    <!-- <button class="MakeTabs__tab btn-default active">Перевести текст</button>
                     <button class="MakeTabs__tab btn-default">Перевести файлы</button>
-                    <button class="MakeTabs__tab btn-default">Перевести аудио</button>
+                    <button class="MakeTabs__tab btn-default">Перевести аудио</button> -->
                   </div>
                   <!-- /VidTranslate -->
                   <div class="MakeTabs__body">

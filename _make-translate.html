@@ -181,47 +181,92 @@
             <!--/MTranslate__fields -->
 
             <div class="TypeTranslate">
-              <div class="TypeTranslate__item active">
-                <div class="TypeTranslate__tarif">
-                  <div class="TypeTranslate__tarif-price">$0.14</div>
-                  <div class="TypeTranslate__tarif-row"></div>
-                  <div class="TypeTranslate__tarif-text">word</div>
-                </div>
-                <div class="TypeTranslate__text">
-                  <div class="TypeTranslate__text-title">Основные переводы</div>
-                  <div class="TypeTranslate__text-category">Сайты | Отчеты</div>
-                </div>
+              <div class="TypeTranslate__item">
+                <input id="radio1" type="radio" name="usluga" value="Основные переводы" />
+                <label for="radio1">
+                  <div class="TypeTranslate__tarif">
+                    <div class="TypeTranslate__tarif-price">$0.14</div>
+                    <div class="TypeTranslate__tarif-row"></div>
+                    <div class="TypeTranslate__tarif-text">word</div>
+                  </div>
+                  <div class="TypeTranslate__text">
+                    <div class="TypeTranslate__text-title">Основные переводы</div>
+                    <div class="TypeTranslate__text-category">Сайты | Отчеты</div>
+                  </div>
+                </label>
               </div>
               <div class="TypeTranslate__item">
-                <div class="TypeTranslate__tarif">
-                  <div class="TypeTranslate__tarif-price">$0.14</div>
-                  <div class="TypeTranslate__tarif-row"></div>
-                  <div class="TypeTranslate__tarif-text">word</div>
-                </div>
-                <div class="TypeTranslate__text">
-                  <div class="TypeTranslate__text-title">Деловой перевод</div>
-                  <div class="TypeTranslate__text-category">Маркетинг | Кореспонденция</div>
-                </div>
+                <input id="radio2" type="radio" name="usluga" value="Деловой перевод" />
+                <label for="radio2">
+                  <div class="TypeTranslate__tarif">
+                    <div class="TypeTranslate__tarif-price">$0.14</div>
+                    <div class="TypeTranslate__tarif-row"></div>
+                    <div class="TypeTranslate__tarif-text">word</div>
+                  </div>
+                  <div class="TypeTranslate__text">
+                    <div class="TypeTranslate__text-title">Деловой перевод</div>
+                    <div class="TypeTranslate__text-category">Маркетинг | Кореспонденция</div>
+                  </div>
+                </label>
               </div>
               <div class="TypeTranslate__item">
-                <div class="TypeTranslate__tarif">
-                  <div class="TypeTranslate__tarif-price">$0.14</div>
-                  <div class="TypeTranslate__tarif-row"></div>
-                  <div class="TypeTranslate__tarif-text">word</div>
-                </div>
-                <div class="TypeTranslate__text">
-                  <div class="TypeTranslate__text-title">Литературный перевод</div>
-                  <div class="TypeTranslate__text-category">Поэзия  |  Поговорки</span></div>
-                </div>
+                <input id="radio3" type="radio" name="usluga" value="Литературный перевод" />
+                <label for="radio3">
+                  <div class="TypeTranslate__tarif">
+                    <div class="TypeTranslate__tarif-price">$0.14</div>
+                    <div class="TypeTranslate__tarif-row"></div>
+                    <div class="TypeTranslate__tarif-text">word</div>
+                  </div>
+                  <div class="TypeTranslate__text">
+                    <div class="TypeTranslate__text-title">Литературный перевод</div>
+                    <div class="TypeTranslate__text-category">Поэзия  |  Поговорки</span></div>
+                  </div>
+                </label>
               </div>
             </div>
             <!--/TypeTranslate -->
 
             <div class="MTranslate__wrap2">
               <div class="VidTranslate">
-                <button class="btn-default active">Перевести текст</button>
+                <div class="Vid-item">
+                  <label class="Vid-item__radio   btn-default">
+                    <input type="radio" id="no" name="quest1" value="no">
+                    <div class="radio__text">Перевести текст</div>
+                  </label>
+                  <select class="Vid-item__select" >
+                    <option selected>Перевести в ...</option>
+                    <option value="1">В файл</option>
+                    <option value="2">В аудио</option>
+                    <option value="3">В видео</option>
+                  </select>
+                </div>
+                <div class="Vid-item">
+                  <label class="Vid-item__radio   btn-default">
+                    <input type="radio" id="no" name="quest1" value="no">
+                    <div class="radio__text">Перевести файлы</div>
+                  </label>
+                  <select class="Vid-item__select" >
+                    <option selected>Перевести в ...</option>
+                    <option value="1">В файл</option>
+                    <option value="2">В аудио</option>
+                    <option value="3">В видео</option>
+                  </select>
+                </div>
+                <div class="Vid-item">
+                  <label class="Vid-item__radio   btn-default">
+                    <input type="radio" id="no" name="quest1" value="no">
+                    <div class="radio__text">Перевести аудио</div>
+                  </label>
+                  <select class="Vid-item__select" >
+                    <option selected>Перевести в ...</option>
+                    <option value="1">В файл</option>
+                    <option value="2">В аудио</option>
+                    <option value="3">В видео</option>
+                  </select>
+                </div>
+                <!-- <button class="btn-default active">Перевести текст</button>
                 <button class="btn-default">Перевести файлы</button>
-                <button class="btn-default">Перевести аудио</button>
+                <button class="btn-default">Перевести аудио</button> -->
               </div>
               <!-- /VidTranslate -->
 
