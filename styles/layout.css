@@ -2013,7 +2013,7 @@ a.more::after {
   color: var(--green-text-color);
 }
 
-.InfoTrans__summ span {
+.InfoTrans__summ div {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
