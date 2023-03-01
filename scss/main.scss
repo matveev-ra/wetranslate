@@ -1739,10 +1739,10 @@ header {
         .TypeTranslate__tarif {
           background: #FE8900;
         }
-        .TypeTranslate__text-title {
+        .TypeTranslate__text-title, .TypeTranslate__text p strong {
           color: #fff;
         }
-        .TypeTranslate__text-category {
+        .TypeTranslate__text-category, .TypeTranslate__text ul li {
           color: #9C5900;
         }
   
@@ -1763,10 +1763,10 @@ header {
         .TypeTranslate__tarif {
           background: #FE8900;
         }
-        .TypeTranslate__text-title {
+        .TypeTranslate__text-title, .TypeTranslate__text p strong {
           color: #fff;
         }
-        .TypeTranslate__text-category {
+        .TypeTranslate__text-category, .TypeTranslate__text ul li {
           color: #9C5900;
         }
       }
@@ -1803,6 +1803,7 @@ header {
   &__tarif-text {
     @include font400(12px,14px);
     color: #fff;
+    text-align: center;
   }
 
   &__text {
@@ -1814,7 +1815,31 @@ header {
 
     p { 
       padding-bottom: 0;
+      margin-bottom: 0;
+
+      strong {
+        @include font700(14px,18px);
+        color: #131313;
+      }
     }
+
+    ul {
+      margin-left: 0;
+      margin-bottom: 0;
+      li {
+        list-style: none;
+        @include font400(12px,18px);
+        color: #707070;
+        display: inline;
+
+        &:not(:last-child)::after {
+          content: "|";
+          display: inline-block;
+          padding: 0 3px;
+        }
+      }
+    }  
+    
   }
 
   &__text-title {
@@ -2248,11 +2273,15 @@ header {
 
   &__item {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
     position: relative;
+
+    @include max-s(768px){
+      flex-wrap: wrap;
+    }
   }
 
   &__track {
@@ -2268,11 +2297,19 @@ header {
   }
 
   &__nametrack {
-    flex:0 1 auto;
+    flex:0 1 35%;
     @include font400(11px,34px);
     color: #000;
-    text-align: center;
+    text-align: left;
     margin: 0 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include max-s(768px){
+      flex:0 1 100%;
+    }
 
   }
 

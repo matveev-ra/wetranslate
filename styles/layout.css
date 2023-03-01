@@ -1851,11 +1851,13 @@ a.more::after {
   background: #FE8900;
 }
 
-.TypeTranslate__item label:hover .TypeTranslate__text-title {
+.TypeTranslate__item label:hover .TypeTranslate__text-title,
+.TypeTranslate__item label:hover .TypeTranslate__text p strong {
   color: #fff;
 }
 
-.TypeTranslate__item label:hover .TypeTranslate__text-category {
+.TypeTranslate__item label:hover .TypeTranslate__text-category,
+.TypeTranslate__item label:hover .TypeTranslate__text ul li {
   color: #9C5900;
 }
 
@@ -1876,11 +1878,13 @@ a.more::after {
   background: #FE8900;
 }
 
-.TypeTranslate__item input:checked + label .TypeTranslate__text-title {
+.TypeTranslate__item input:checked + label .TypeTranslate__text-title,
+.TypeTranslate__item input:checked + label .TypeTranslate__text p strong {
   color: #fff;
 }
 
-.TypeTranslate__item input:checked + label .TypeTranslate__text-category {
+.TypeTranslate__item input:checked + label .TypeTranslate__text-category,
+.TypeTranslate__item input:checked + label .TypeTranslate__text ul li {
   color: #9C5900;
 }
 
@@ -1927,6 +1931,7 @@ a.more::after {
   font-size: 12px;
   line-height: 14px;
   color: #fff;
+  text-align: center;
 }
 
 .TypeTranslate__text {
@@ -1948,6 +1953,34 @@ a.more::after {
 
 .TypeTranslate__text p {
   padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.TypeTranslate__text p strong {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #131313;
+}
+
+.TypeTranslate__text ul {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.TypeTranslate__text ul li {
+  list-style: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #707070;
+  display: inline;
+}
+
+.TypeTranslate__text ul li:not(:last-child)::after {
+  content: "|";
+  display: inline-block;
+  padding: 0 3px;
 }
 
 .TypeTranslate__text-title {
@@ -2332,8 +2365,8 @@ a.dropfiles__name:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -2354,14 +2387,18 @@ a.dropfiles__name:hover {
 
 .OutputAudio__nametrack {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -ms-flex: 0 1 35%;
+  flex: 0 1 35%;
   font-weight: 400;
   font-size: 11px;
   line-height: 34px;
   color: #000;
-  text-align: center;
+  text-align: left;
   margin: 0 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .OutputAudio__close {
@@ -4392,8 +4429,6 @@ a.OrderAudio__download:hover {
   transition: .2s;
 }
 
-/*# sourceMappingURL=layout.css.map */
-
 @media only screen and (max-width: 1190px) {
   .header__text .HD1 {
     font-size: calc(25px + 16 * ((100vw - 320px) / (1920 - 320)));
@@ -4957,8 +4992,19 @@ a.OrderAudio__download:hover {
     margin-bottom: 0;
   }
 
+  .OutputAudio__item {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
   .OutputAudio__track {
     width: 92%;
+  }
+
+  .OutputAudio__nametrack {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
   }
 
   .OutputAudio__close {
