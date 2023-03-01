@@ -178,6 +178,7 @@ a.btn-default:hover {
   cursor: pointer;
   color: #fff;
   border: 1px solid #FC9102;
+  text-decoration: none;
 }
 
 .btn-green,
