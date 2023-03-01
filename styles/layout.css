@@ -1961,11 +1961,13 @@ a.more::after {
   font-size: 14px;
   line-height: 18px;
   color: #131313;
+  text-transform: uppercase;
 }
 
 .TypeTranslate__text ul {
   margin-left: 0;
   margin-bottom: 0;
+  font-size: 0;
 }
 
 .TypeTranslate__text ul li {
@@ -1975,6 +1977,7 @@ a.more::after {
   line-height: 18px;
   color: #707070;
   display: inline;
+  margin-bottom: 0;
 }
 
 .TypeTranslate__text ul li:not(:last-child)::after {
