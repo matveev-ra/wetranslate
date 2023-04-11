@@ -78,7 +78,39 @@
   }
 }
 
-.btn-green, a.btn-green{
+.btn-default-green, a.btn-default-green{
+  width: auto;
+  height: 48px;
+  background: #fff;
+  padding: 2px 18px;
+  border: 1px solid #0F4D52;
+  border-radius: 5px;
+
+  @include font400(14px,16px);
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    background: linear-gradient(93.7deg, #66A882 -10.98%, #488774 108.23%);
+    color: #fff;
+    border: 1px solid #0F4D52;
+  }
+
+  &:hover {
+    background: linear-gradient(93.7deg, #66A882 -10.98%, #488774 108.23%);
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #0F4D52;
+    box-shadow: 9px 8px 17px rgba(72, 135, 116, 0.45);
+    text-decoration: none;
+  }
+}
+
+.btn-green, a.btn-green{ 
   width: 200px;
   height: 44px;
   display: flex;
@@ -103,6 +135,7 @@
     color: #fff;
   }
 }
+
 .btn-gray, a.btn-gray{
   width: 200px;
   height: 44px;
