@@ -329,7 +329,19 @@ $(function () {
 // });
 
 
+
+
+
 });// end document ready
+
+
+// поле загрузки файла
+$('.input-file input[type=file]').on('change', function(){
+	let file = this.files[0];
+	$(this).closest('.input-file').find('.input-file-text').html(file.name);
+});
+
+
 
 // подключение к полям телефона перфикс и флаг страны     
 $(".phone-flag").each((i, e) => {

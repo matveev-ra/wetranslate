@@ -86,6 +86,12 @@ color: var(--green-text-color);
 
 }
 
+.block-c {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
 
 .Wrapper-main {
   display: flex;
@@ -3779,6 +3785,7 @@ header {
     color: var(--green-text-color);
   }
 }
+
 .Field2 {
   margin-bottom: 15px;
 
@@ -3800,8 +3807,20 @@ header {
     &:focus {
       background: #ECECEC;
     }
-    
   }
+
+  textarea {
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    border: 1px solid #0F4D52;
+    border-radius: 5px;
+    padding: 15px 15px 15px 25px;
+    @include font700(16px,19px);
+    color: #131313  ;
+  }
+
+
 }
 
 .checkbox {
@@ -4371,20 +4390,38 @@ header {
 
 
 .Contact {
-  &__top {  
+  margin-bottom: 140px;
 
-    margin-bottom: 40px;
+    @include max-s(992px){
+      margin-bottom: 40px; 
+    }
+
+
+  .HD1 {
+    color: var(--green-text-color);
+  }
+
+  &__top {  
+    margin-bottom: 60px;
     & .HD-page {
       margin-bottom: 0px;
     }
   }
+
   &__desc {
+
     @include font400(18px,21px);
     color: #0F4D52;
     b {
       @include font700(18px,21px);
       color: #0F4D52;
     }
+  }
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
   }
 }
 
@@ -4427,7 +4464,6 @@ a.pageNav-link {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
 }
-
 .pageNav-item {
   &:first-child {
     .pageNav-link {
@@ -4460,4 +4496,281 @@ a.pageNav-link {
 }
 
 
+
+.FormBack {
+  width: 48%;
+  background: #FFFFFF;
+  box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  @include max-s(768px){
+    width: 100%; 
+    margin-bottom: 40px;
+  }
+
+  &__wrap {
+    padding: 40px 60px;
+
+    @include max-s(540px){
+      padding: 15px;
+    }
+  }
+  &__policy {
+    margin-bottom: 25px;
+  }
+}
+
+
+
+.input-file {
+	position: relative;
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #0F4D52;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.input-file-text {
+  position: relative;
+	padding: 0 0 0 40px;
+	line-height: 40px;
+	text-align: left;
+	height: 40px;
+	box-sizing: border-box;
+	width: 70%;
+  @include font400(16px,40px);
+  color: #131313;
+  display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.input-file-text::before {
+  content:' ';
+  display:block;
+  background: url('../images/icon-attach.svg') center top no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 15px;
+  top: 9px;
+}
+
+.input-file-btn {
+  flex: 0 0 115px;
+	cursor: pointer;
+	outline: none;
+	background-color: #419152;
+	text-align: center;
+  @include font400(13px,27px);
+  color: #fff;
+	box-sizing: border-box;
+	border: none;
+  height: 27px;
+  background: linear-gradient(93.7deg, #66A882 -10.98%, #488774 108.23%), #FFFFFF;
+  border-radius: 49px;
+  margin-right: 15px;
+}
+.input-file-btn:focus {
+  outline: none;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+
+
+.Offices {
+  width: 48%;
+
+  @include max-s(768px){
+    width: 100%; 
+  }
+
+  .HD2 {
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  &__adress { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom : 1px solid #E3E3E3;
+    margin-bottom: 30px;
+    }
+
+  &__adress-item {
+    width: 48%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @include max-s(540px){
+      width: 100%;
+    }
+  }
+
+  &__adress-label {
+    background: url('../images/icon-map.svg') center top no-repeat;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+
+  &__adress-info {
+    flex: 1 1 auto;
+  }
+
+  &__adress-title {
+    @include font700(18px,21px);
+    color: var(--green-text-color);
+  }
+
+  &__adress-desc {
+    @include font400(16px,18px);
+    color: #000;
+    margin-bottom: 5px;
+  }
+
+  &__adress-adress {
+    @include font400(14px,18px);
+    color: #7C7F82;
+    margin-bottom: 10px;
+  }
+
+  &__adress-link {
+    @include font400(14px,18px);
+    color: var(--green-text-color);
+
+  }
+
+  &__call {}
+
+  &__call-title {
+    @include font700(22px,26px);
+    color: var(--green-text-color);
+  }
+
+  &__call-online {
+    @include font400(14px,19px);
+    color: #7C7F82;
+    margin-bottom: 10px;
+
+    .off {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background: #F97373;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-left: 5px;
+      
+    }
+    .on {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background: var(--green-text-color);
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+  }
+
+  &__call-text {
+    @include font400(14px,19px);
+    color: #000;
+    margin-bottom: 20px;
+  }
+}
+
+
+.Call-item {
+  margin-bottom: 10px;
+
+		&__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+		&__img {margin-right: 5px;}
+
+		&__text {
+      a {
+        @include font500(18px,19px);
+        color: #4D8C77;
+        text-decoration: none;
+      }
+    }
+
+		&__show-info {
+      a {
+        @include font400(13px,18px);
+        color: #7C7F82;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+}
+
+
+.Quote {
+  border: 1px solid #E3E3E3;
+
+  &__in {
+    padding:50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include max-s(540px){
+      padding: 15px; 
+    }
+  }
+
+  &__text {
+    flex: 0 0 450px;
+    margin-right: 20px;
+
+    @include max-s(768px){
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text-title {
+    @include font800(36px,50px);
+    color: var(--green-text-color);
+
+    @include max-s(768px){
+      @include font800(26px,46px);
+    }
+  }
+
+  &__text-desc {
+    @include font400(px,px);
+    color: #768190;
+  }
+
+  &__btn {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
 

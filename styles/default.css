@@ -8,8 +8,8 @@ button::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="subm
 select:focus,input[type="text"]:focus,input[type="password"]:focus,textarea:focus{outline:none}
 select option {padding-left:3px;}
 table{border-collapse:collapse}
-a:link,a:visited{color:#CB0FE0;text-decoration:underline}
-a:hover{color:#CB0FE0;text-decoration:none}
+a:link,a:visited{color:#4D8C77;text-decoration:underline}
+a:hover{color:#4D8C77;text-decoration:none}
 
 
 
