@@ -5631,6 +5631,65 @@ ul.Working-list li::before {
   flex: 0 0 250px;
 }
 
+.Register {
+  margin-top: 0px;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.Register-form {
+  margin-top: 110px;
+  width: 48%;
+}
+
+.Register-form .HD2 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.Register-form .Desc {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--green-text-color);
+  margin-bottom: 35px;
+}
+
+.Register-form form {
+  width: 350px;
+}
+
+.Register-form .Noacc {
+  text-align: center;
+}
+
+.Register-form__btn {
+  margin-bottom: 15px;
+}
+
+.Register-form__btn .btn-green {
+  width: 100%;
+}
+
+.Register-text {
+  width: 48%;
+}
+
+.Register-text__img {
+  text-align: center;
+}
+
+.Register-text .HD2 {
+  margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 1200px) {
   .CardCustomer-big__logo {
     -webkit-box-flex: 0;
@@ -6668,6 +6727,22 @@ ul.Working-list li::before {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     margin-bottom: 20px;
+  }
+
+  .Register-form {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .Register-form form {
+    width: 100%;
+  }
+
+  .Register-text {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    width: 100%;
   }
 }
 
