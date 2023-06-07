@@ -5672,6 +5672,7 @@ ul.Working-list li::before {
 
 .Register-form__btn {
   margin-bottom: 15px;
+  margin-top: 35px;
 }
 
 .Register-form__btn .btn-green {
