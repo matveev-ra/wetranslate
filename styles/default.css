@@ -44,7 +44,7 @@ li {
     margin-bottom: 5px;
 }
 
-p {
+p:not(:last-child) {
     font-size: 14px;
     line-height: 18px;
     color: #000;
