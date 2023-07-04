@@ -1551,6 +1551,12 @@ header {
 }
 
 .Top-menu-foot {
+
+  &.menuUp ul li ul {
+    top:unset; 
+    bottom: 35px;
+  }
+
   @include max-s(992px){
     display: none; 
   }
