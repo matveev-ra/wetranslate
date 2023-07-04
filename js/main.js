@@ -330,28 +330,27 @@ $(function () {
 
 
 
-// при достижении низа меню меньше 170px меню выподает вверх
-$(window).scroll(function() {
-    $('.Top-menu-foot').each(function(){
-    var menuPos = $(this).offset().top;
-    var topOfWindow = $(window).scrollTop();
-    var topPositionEl = (menuPos + 70) - topOfWindow;
-    var windowHeight = $(window).innerHeight();
-    var bottomPosition = windowHeight - topPositionEl 
+    // при достижении низа меню меньше 170px меню выподает вверх
+    $(window).scroll(function() {
+        $('.Top-menu-foot').each(function(){
+        var menuPos = $(this).offset().top;
+        var topOfWindow = $(window).scrollTop();
+        var topPositionEl = (menuPos + 70) - topOfWindow;
+        var windowHeight = $(window).innerHeight();
+        var bottomPosition = windowHeight - topPositionEl 
 
-    //console.log( windowHeight - topPositionEl );
+        //console.log( windowHeight - topPositionEl );
 
-        if (bottomPosition < 170) {
-            $(this).addClass("menuUp");
-        } else if (menuPos > topOfWindow + 400) {
-            $(this).removeClass("menuUp");
-        }
+            if (bottomPosition < 170) {
+                $(this).addClass("menuUp");
+            } else if (menuPos > topOfWindow + 400) {
+                $(this).removeClass("menuUp");
+            }
+        });
     });
-});
 
 
 
-$(".Bottom-bar").offset()
 
 });// end document ready
 
