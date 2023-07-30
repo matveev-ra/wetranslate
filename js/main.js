@@ -1,4 +1,15 @@
 $(function () {
+
+    //подключение модалки
+    $('.bpopup').click(function(e) {
+        e.preventDefault();
+        var href = $(this).attr('href');
+        $(href).bPopup({
+                closeClass:'close',
+                positionStyle: 'fixed'
+                //follow: [false, false], //x, y
+            });
+    });
     
     //прилипает меню к верху
     $(window).scroll(function () {
@@ -273,25 +284,7 @@ $(function () {
               });
 
 
-              // подключение слайдера swiper для блоков цен
-              var swiper = new Swiper(".swiper", {
-                //slidesPerView: 1,
-                slidesPerView: "auto",
-                spaceBetween: 10,
-                freeMode: true,
-                //centeredSlides: false,
-                //slidesPerGroup: 1,
-                //loop: true,
-                //loopFillGroupWithBlank: true,
-                // pagination: {
-                //   el: ".swiper-pagination",
-                //   //clickable: true,
-                // },
-                navigation: {
-                  nextEl: ".swiper-button-n",
-                  prevEl: ".swiper-button-p" ,
-                },
-              });    
+                 
          
               
 
@@ -350,10 +343,47 @@ $(function () {
     });
 
 
+      // Находим радио кнопки и кнопку отправки
+      var radioButtons = $('body input[type="radio"].input-pay');
+      var submitButton = $('body #nextPay');
+  
+      // При изменении состояния радио кнопок
+      radioButtons.change(function() {
+        // Проверяем, есть ли выбранная радио кнопка
+        if (radioButtons.is(':checked')) {
+          // Если есть выбранная кнопка, активируем кнопку отправки
+          submitButton.prop('disabled', false);
+        } else {
+          // Если нет выбранной кнопки, деактивируем кнопку отправки
+          submitButton.prop('disabled', true);
+        }
+      });
+
+//       $("body").on("click", ".input-pay", function () {
+//         if ($(this).prop( "checked" )) {
+//            $('#nextPay').removeAttr('disabled');
+//            } else {
+//                $('#nextPay').attr("disabled","disabled");
+//            }
+//    });
+
+
 
 
 });// end document ready
 
+document.getElementById('selectBox').addEventListener('change', function() {
+    var selectBox = this;
+    var customInput = document.getElementById('customInput');
+
+    if (selectBox.value === 'custom') {
+      customInput.style.display = 'none';
+      customInput.value = ''; // Очистить поле ввода, если пользователь вернулся к кастомному варианту
+    } else {
+      customInput.style.display = 'block';
+      customInput.value = selectBox.value;
+    }
+  });
 
 // поле загрузки файла
 $('.input-file input[type=file]').on('change', function(){
@@ -390,4 +420,24 @@ $(".phone-flag").each((i, e) => {
         utilsScript: "js/utils.js",
     });
 });
+
+// подключение слайдера swiper для блоков цен
+new Swiper(".swiper", {
+    //slidesPerView: 1,
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    freeMode: true,
+    //centeredSlides: false,
+    //slidesPerGroup: 1,
+    //loop: true,
+    //loopFillGroupWithBlank: true,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   //clickable: true,
+    // },
+    navigation: {
+      nextEl: ".swiper-button-n",
+      prevEl: ".swiper-button-p" ,
+    },
+  }); 
 

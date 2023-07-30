@@ -163,19 +163,77 @@
           <div class="CashIn__cont">
             <div class="CashInput">
               <div class="CashIn__cont-titile">Введите сумму пополнения</div>
-              <input type="text" placeholder="€300">
+              <!-- <input type="text" placeholder="€300"> -->
+              <div class="Field Field-editable">
+                <select id="selectBox">
+                  <option>Укажите сумму</option>
+                  <option value="100">100</option>
+                  <option value="200">200</option>
+                  <option value="300">300</option>
+                </select>
+                <input  id="customInput" class="editSelect"" type="text" name="format" value="" />
+              </div>
             </div>
             <div class="CashCheckPay">
-              <div class="CashIn__cont-titile">Введите сумму пополнения</div>
+              <div class="CashIn__cont-titile">Выберите платежную систему</div>
               <div class="CashCheckPay__wrap">
-                <div class="CashCheckPay__item"><img src="images/icon-pay01.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay02.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay03.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay04.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay01.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay02.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay03.png" alt=""></div>
-                <div class="CashCheckPay__item"><img src="images/icon-pay04.png" alt=""></div>
+                <div class="CashCheckPay__item">
+                  <input id="radio1"  type="radio" name="usluga" value="" />
+                  <label for="radio1">
+                    <img src="images/icon-pay01.png" alt="">
+                    <span class="CashCheckPay__item-border"></span>
+                  </label>
+                </div>
+                <div class="CashCheckPay__item">
+                  <input id="radio2"  type="radio" name="usluga" value="" />
+                  <label for="radio2">
+                    <img src="images/icon-pay02.png" alt="">
+                    <span class="CashCheckPay__item-border"></span>
+                  </label>
+                </div>
+                <div class="CashCheckPay__item">
+                  <input id="radio3"  type="radio" name="usluga" value="" />
+                  <label for="radio3">
+                    <img src="images/icon-pay03.png" alt="">
+                    <span class="CashCheckPay__item-border"></span>
+                  </label>
+                </div>
+                <div class="CashCheckPay__item">
+                  <input id="radio4"  type="radio" name="usluga" value="" />
+                  <label for="radio4">
+                    <img src="images/icon-pay04.png" alt="">
+                    <span class="CashCheckPay__item-border"></span>
+                  </label>
+                </div>
+                <div class="CashCheckPay__item">
+                  <input id="radio5"  type="radio" name="usluga" value="" />
+                  <label for="radio5">
+                    <img src="images/icon-pay05.png" alt="">
+                    <span class="CashCheckPay__item-border"></span>
+                  </label>
+                </div>
+                <div class="CashCheckPay__item">
+                  <input id="radio6"  type="radio" name="usluga" value="" />
+                  <label for="radio6">
+                    <img src="images/icon-pay06.png" alt="">
+                    <span class="CashCheckPay__item-border"></span>
+                  </label>
+                </div>
+                <div class="CashCheckPay__item">
+                  <input id="radio7"  type="radio" name="usluga" value="" />
+                  <label for="radio7">
+                    <img src="images/icon-pay07.png" alt="">
+                    <span class="CashCheckPay__item-border"></span>
+                  </label>
+                </div>
+                <div class="CashCheckPay__item">
+                  <input id="radio8"  type="radio" name="usluga" value="" />
+                  <label for="radio8">
+                    <img src="images/icon-pay08.png" alt="">
+                    <span class="CashCheckPay__item-border"></span>
+                  </label>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -185,7 +243,7 @@
             <div class="CashIn__payall">
               Сумма к оплате (+налог 10%): <span>€300</span>
             </div>
-            <button class="btn-orange">пополнить</button>
+            <a href="#ModalPay" class="bpopup btn-orange">пополнить</a>
           </div>
 
         </div>
@@ -314,13 +372,93 @@
   </div>
   <!-- /.Wrapper-main-->
  
+  <!--MODAL //////////////////  - форма  ////////////////////-->
+<div class="Modal" id="ModalPay" style=" display: none;"><!--  -->
+  <div class="Modalclose close">&#215;</div>
+  <div class="Modal__wrap">
+    <div class="CashCheckPay">
+      <div class="CashIn__cont-titile">Выберите способ оплаты</div>
+      <div class="CashCheckPay__wrap CashCheckPay__wrap-modal">
+        <div class="CashCheckPay__item">
+          <input id="radiopay1"  type="radio" name="pay"  class="input-pay"/>
+          <label for="radiopay1">
+            <img src="images/icon-mini-pay01.png" alt="">
+            <span class="CashCheckPay__item-border"></span>
+          </label>
+        </div>
+        <div class="CashCheckPay__item">
+          <input id="radiopay2"  type="radio" name="pay" value="" class="input-pay"/>
+          <label for="radiopay2">
+            <img src="images/icon-mini-pay02.png" alt="">
+            <span class="CashCheckPay__item-border"></span>
+          </label>
+        </div>
+        <div class="CashCheckPay__item">
+          <input id="radiopay3"  type="radio" name="pay" value="" class="input-pay"/>
+          <label for="radiopay3">
+            <img src="images/icon-mini-pay03.png" alt="">
+            <span class="CashCheckPay__item-border"></span>
+          </label>
+        </div>
+        <div class="CashCheckPay__item">
+          <input id="radiopay4"  type="radio" name="pay" value="" class="input-pay"/>
+          <label for="radiopay4">
+            <img src="images/icon-mini-pay04.png" alt="">
+            <span class="CashCheckPay__item-border"></span>
+          </label>
+        </div>
+        <div class="CashCheckPay__item">
+          <input id="radiopay5"  type="radio" name="pay" value="" class="input-pay"/>
+          <label for="radiopay5">
+            <img src="images/icon-mini-pay05.png" alt="">
+            <span class="CashCheckPay__item-border"></span>
+          </label>
+        </div>
+        <div class="CashCheckPay__item">
+          <input id="radiopay6"  type="radio" name="pay" value="" class="input-pay" />
+          <label for="radiopay6">
+            <img src="images/icon-mini-pay06.png" alt="">
+            <span class="CashCheckPay__item-border"></span>
+          </label>
+        </div>
+        <div class="CashCheckPay__item">
+          <input id="radiopay7"  type="radio" name="pay" value="" class="input-pay"/>
+          <label for="radiopay7">
+            <img src="images/icon-mini-pay07.png" alt="">
+            <span class="CashCheckPay__item-border"></span>
+          </label>
+        </div>
+        <div class="CashCheckPay__item">
+          <input id="radiopay8"  type="radio" name="pay" value="" />
+          <label for="radiopay8">
+            <img src="images/icon-mini-pay08.png" alt="">
+            <span class="CashCheckPay__item-border"></span>
+          </label>
+        </div>
+        
+      </div>
+
+      <div class="CashIn__bottom">
+
+        <button class="btn-orange" id="nextPay" disabled="disabled">Далее</button>
+      </div>
+
+    </div>
+  </div>
+ 
+ 
+</div>
+<!-- /MODAL /////////////////////////////////////////////////////-->
 
 
 
 <!-- JS -->
 <script src="js/jquery-1.9.0.min.js"></script>
 <script src="js/owl.carousel.js"></script>
+<script src="js/jquery.bpopup.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
+
 
 
 

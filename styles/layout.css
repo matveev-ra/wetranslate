@@ -92,6 +92,18 @@ a.btn-orange:hover {
   box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
 }
 
+.btn-orange[disabled],
+.btn-orange.disabled,
+.btn-orange a.btn-orange[disabled],
+.btn-orange a.btn-orange.disabled,
+a.btn-orange[disabled],
+a.btn-orange.disabled,
+a.btn-orange a.btn-orange[disabled],
+a.btn-orange a.btn-orange.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .btn-orange-auto,
 a.btn-orange-auto {
   width: auto;
@@ -1826,6 +1838,30 @@ a.more::after {
 
 .Field input.icon-search {
   background: url("../images/icon-search.svg") 95% 50% no-repeat;
+}
+
+.Field input.editSelect {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #131313;
+  display: none;
+}
+
+.Field input.editSelect:focus {
+  outline: none;
+}
+
+.Field-editable {
+  position: relative;
+}
+
+.Field-editable select {
+  height: 65px;
 }
 
 .TypeTranslate {
@@ -4004,7 +4040,6 @@ a.OrderAudio__download:hover {
 
 .CashIn__bottom .btn-orange {
   width: 166px;
-  margin-bottom: 20px;
 }
 
 .CashIn__payall {
@@ -4013,7 +4048,6 @@ a.OrderAudio__download:hover {
   line-height: 19px;
   color: #131313;
   margin-right: 40px;
-  margin-bottom: 20px;
 }
 
 .CashIn__payall span {
@@ -4100,22 +4134,53 @@ a.OrderAudio__download:hover {
   justify-content: center;
 }
 
+.CashCheckPay__wrap-modal {
+  margin-bottom: 20px;
+}
+
 .CashCheckPay__item {
   font-size: 0;
-  padding-bottom: 10px;
-  margin: 0 10px;
+  margin: 0 10px 10px;
+  position: relative;
 }
 
 .CashCheckPay__item img {
   font-size: 0;
-  border: 1px solid #d3d3d3;
   border-radius: 5px;
 }
 
-.CashCheckPay__item img:hover {
+.CashCheckPay__item input {
+  display: none;
+}
+
+.CashCheckPay__item input:checked + label span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   border: 2px solid #66A882;
-  margin: -1px;
+  border-radius: 5px;
+}
+
+.CashCheckPay__item label span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.CashCheckPay__item label span:hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border: 2px solid #66A882;
+  border-radius: 5px;
 }
 
 .CashIn-list__cont {
@@ -5745,6 +5810,37 @@ ul.Working-list li::before {
   font-size: 0;
 }
 
+.Modal {
+  max-width: 750px;
+  margin: 5px auto;
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 16px #fff;
+  box-shadow: 0 0 16px #fff;
+}
+
+.Modal .Modalclose {
+  background: url("../images/close.png") center top no-repeat;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-weight: normal;
+  opacity: 0.6;
+  font-size: 0;
+}
+
+.Modal .Modalclose:hover {
+  opacity: 1;
+}
+
+.Modal__wrap {
+  padding: 40px;
+}
+
 @media only screen and (max-width: 1200px) {
   .CardCustomer-big__logo {
     -webkit-box-flex: 0;
@@ -6896,6 +6992,14 @@ ul.Working-list li::before {
 
   .Working-2__text {
     margin: 15px 0px;
+  }
+
+  .Modal {
+    width: 90%;
+  }
+
+  .Modal__wrap {
+    padding: 20px;
   }
 }
 

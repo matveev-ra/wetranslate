@@ -21,6 +21,10 @@
     transition: all 0.5s linear;
     box-shadow: 9px 8px 17px rgba(235, 134, 2, 0.45);
   }
+  &[disabled], &.disabled, a.btn-orange[disabled], a.btn-orange.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 }
 
 .btn-orange-auto, a.btn-orange-auto{

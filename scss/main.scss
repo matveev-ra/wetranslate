@@ -1671,6 +1671,8 @@ header {
 
 .Field {
 
+  
+
   select, input {
     width: 100%;
     height: 50px;
@@ -1704,6 +1706,27 @@ header {
     &.icon-search {
         background: url('../images/icon-search.svg') 95% 50% no-repeat;
      }
+
+     &.editSelect {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      @include font700(16px, 19px);
+      color: #131313;
+      display: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &-editable {
+    position: relative;
+
+    select {
+      height: 65px;
+    }
   }
 }
 
@@ -3938,7 +3961,7 @@ header {
 
     .btn-orange {
       width: 166px;
-      margin-bottom: 20px;
+
 
       @include max-s(768px) {
         margin: 0 auto;
@@ -3950,7 +3973,7 @@ header {
     @include font400(16px, 19px);
     color: #131313;
     margin-right: 40px;
-    margin-bottom: 20px;
+
 
     @include max-s(768px) {
       width: 100%;
@@ -4002,12 +4025,17 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    &-modal {
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
     font-size: 0;
-    padding-bottom: 10px;
-    margin: 0 10px;
+    
+    margin: 0 10px 10px;
+    position: relative;
 
       @include max-s(450px){
         width: 100px; 
@@ -4016,14 +4044,41 @@ header {
 
     img {
       font-size: 0;
-      border: 1px solid #d3d3d3;
+      // border: 1px solid #d3d3d3;
       border-radius: 5px;
+    }
+    input {
+      display: none;  
 
-      &:hover {
+      &:checked + label span {
+        // background: linear-gradient(93.7deg, #FC9102 -10.98%, #FFA32E 108.23%);
+        // box-shadow: 9px 8px 17px rgba(252, 144, 0, 0.45);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
         border: 2px solid #66A882;
-        margin: -1px;
-        cursor: pointer;
+        border-radius: 5px;
       }
+    }
+    label span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    label span:hover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border: 2px solid #66A882;
+      border-radius: 5px;
     }
   }
 
@@ -5768,6 +5823,41 @@ ul.Working-list {
 }
 
 
+.Modal {
+  max-width: 750px;
+  margin: 5px auto;
+  position: relative;
+  background:#fff;
+  border-radius: 5px;
+  box-shadow: 0 0 16px #fff;
+
+  @include max-s(650px) {
+    width: 90%;
+  }
+
+  & .Modalclose {
+    background: url('../images/close.png') center top no-repeat;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: normal;
+    opacity: 0.6;
+    font-size: 0;
+
+    &:hover {
+      opacity: 1;
+     }
+  }
+  &__wrap {
+    padding: 40px;
+    @include max-s(650px) {
+      padding: 20px;
+    }
+  }
+}
 
 
 
