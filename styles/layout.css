@@ -655,6 +655,15 @@
   height: 7px;
 }
 
+@media only screen and (max-width: 992px) {
+  .Top-menu ul li.parent::after {
+    background: url("../images/down-arrow-black.svg") center top no-repeat;
+    position: absolute;
+    top: 17px;
+    right: 0;
+  }
+}
+
 .Top-menu ul li.parent:hover ul {
   display: block;
   padding: 10px 15px;

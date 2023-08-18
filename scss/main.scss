@@ -241,6 +241,13 @@ a {
           background: url('../images/down-arrow.svg') center top no-repeat;
           width: 11px;
           height: 7px; 
+
+          @include max-s(992px){
+            background: url('../images/down-arrow-black.svg') center top no-repeat;
+            position: absolute;
+            top: 17px;
+            right: 0;
+          }
         }
 
         &:hover {
