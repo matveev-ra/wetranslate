@@ -183,6 +183,7 @@ a {
     justify-content: center;
     margin-left: 0;
     align-items: center;
+    margin-bottom: 0;
 
       @include max-s(992px){
         display: block;
