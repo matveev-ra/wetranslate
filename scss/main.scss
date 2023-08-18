@@ -723,9 +723,8 @@ header {
       margin-top: 0;
       margin-left: 15px;
 
-        @include max-s(1190px){
-          //flex: 0 1 380px;
-          //flex: 0 1 40%;
+        @include max-s(768px){
+          margin-top: 86px;
         }
 
         @include max-s(992px){
