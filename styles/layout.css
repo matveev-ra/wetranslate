@@ -736,6 +736,7 @@
     width: 250px;
     z-index: 10;
     opacity: 0;
+    overflow: auto;
   }
 }
 
@@ -757,7 +758,7 @@
   height: 22px;
   margin-top: 24px;
   margin-right: 25px;
-  z-index: 15;
+  z-index: 10;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
       transform: translateY(-50%);
@@ -1985,6 +1986,12 @@ header {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  .AboutReg__item {
+    width: 100%;
+  }
+}
+
 .AboutReg__item div {
   font-weight: 800;
   font-size: 64px;
@@ -2003,8 +2010,8 @@ header {
 @media only screen and (max-width: 576px) {
   .AboutReg__item div {
     font-weight: 800;
-    font-size: 45px;
-    line-height: 55px;
+    font-size: 35px;
+    line-height: 45px;
   }
 }
 
@@ -2020,6 +2027,14 @@ header {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .AboutReg__item span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 

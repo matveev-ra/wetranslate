@@ -318,6 +318,7 @@ a {
     width: 250px;
     z-index: 10;
     opacity: 0;
+    overflow: auto;
   }
 
 
@@ -341,7 +342,7 @@ a {
   height: 22px;
   margin-top: 24px;
   margin-right: 25px;
-  z-index: 15;
+  z-index: 10;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   -webkit-transition: all .3s linear;
@@ -1345,6 +1346,9 @@ header {
         text-align: center;
          margin-bottom: 20px;
       }
+      @include max-s(576px)  {
+        width: 100%;
+      }
 
       div {
         @include font800(64px,77px);
@@ -1354,7 +1358,7 @@ header {
           @include font800(55px,60px);
         }
         @include max-s(576px)  {
-          @include font800(45px,55px);
+          @include font800(35px,45px);
         }
       }
       span {
@@ -1363,6 +1367,9 @@ header {
 
           @include max-s(768px)  {
             @include font500(20px,24px);
+          }
+          @include max-s(576px)  {
+            @include font500(16px,20px);
           }
       }
     }
