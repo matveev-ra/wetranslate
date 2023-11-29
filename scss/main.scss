@@ -1841,6 +1841,13 @@ header {
   &__tarif-price {
     @include font700(14px,17px);
     color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    span:first-child  {
+      margin-right: 5px;
+    }
   }
 
   &__tarif-row {
@@ -2802,7 +2809,7 @@ header {
     }
 
   .MyBlance {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
   }
 }
 
@@ -2813,13 +2820,29 @@ header {
     @include font400(24px,26px);
     color: var(--green-text-color);
     margin-bottom: 4px;
-    
-    span {
-      font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+
+
+  }
+  &__info-title {
+    @include font400(20px,24px);
+    margin-right: 5px;
+    text-align: left;
+    flex: 0 0 auto;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  &__info-summ {
+    font-weight: bold;
+    .summ-balans {
+      margin-right: 5px;     
     }
   }
 
   &__cashIn {
+    text-align: left;
 
     a {
       @include font700(16px,18px);
